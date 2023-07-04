@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="./assets/css/sidebar/sidebar-content-list.css">
     <link rel="stylesheet" href="./assets/css/sidebar/sidebar-content-list-item.css">
     <link rel="stylesheet" href="./assets/css/sidebar/sidebar-content-list-item-icon.css">
+    <link rel="stylesheet" href="./assets/css/sidebar/sidebar-content-list-item-info.css">
+    <link rel="stylesheet" href="./assets/css/sidebar/sidebar-content-social.css">
+    <link rel="stylesheet" href="./assets/css/sidebar/sidebar-content-social-item.css">
     
 
 
@@ -40,7 +43,7 @@
         <!-- * ========== SIDEBAR ========== * -->
         <aside class="sidebar" data-sidebar>
 
-            <header class="sidebar__header">
+            <div class="sidebar__header">
 
                 <figure class="sidebar__header__avatar">
                     <img src="./assets/images/my-avatar.png" alt="Alejandra Carabente" width="80">
@@ -55,7 +58,7 @@
                     <span>Mostrar contactos</span>
                     <ion-icon name="chevron-down"></ion-icon>
                 </button>
-            </header>
+            </div>
 
             <div class="sidebar__content">
 
@@ -70,9 +73,9 @@
                             <ion-icon name="logo-whatsapp"></ion-icon>
                         </div>
 
-                        <div class="contact-info">
-                            <p class="contact-title">Teléfono</p>
-                            <a href="https://wa.me/+542645412210" class="contact-link">+54 (264) 541-2210</a>
+                        <div class="sidebar__content__list__item__info">
+                            <p>Teléfono</p>
+                            <a href="https://wa.me/+542645412210">+54 (264) 541-2210</a>
                         </div>
 
                     </li>
@@ -84,9 +87,9 @@
                             <ion-icon name="logo-google"></ion-icon>
                         </div>
 
-                        <div class="contact-info">
-                            <p class="contact-title">Gmail</p>
-                            <a href="mailto:alejandracarabante@gmail.com" class="contact-link">alejandracarabante</a>
+                        <div class="sidebar__content__list__item__info">
+                            <p>Gmail</p>
+                            <a href="mailto:alejandracarabante@gmail.com">alejandracarabante</a>
                         </div>
 
                     </li>
@@ -97,8 +100,8 @@
                             <ion-icon name="calendar-outline"></ion-icon>
                         </div>
 
-                        <div class="contact-info">
-                            <p class="contact-title">Cumpleaños</p>
+                        <div class="sidebar__content__list__item__info">
+                            <p>Cumpleaños</p>
                             <time datetime="1982-06-23">31 Octubre 1970</time>
                         </div>
 
@@ -110,8 +113,8 @@
                             <ion-icon name="location-outline"></ion-icon>
                         </div>
 
-                        <div class="contact-info">
-                            <p class="contact-title">Ubicación</p>
+                        <div class="sidebar__content__list__item__info">
+                            <p>Ubicación</p>
                             <address>Rawson, San Juan, Argentina</address>
                         </div>
 
@@ -121,21 +124,21 @@
 
                 <div class="sidebar__content__separator"></div>
 
-                <ul class="social-list">
+                <ul class="sidebar__content__social">
 
-                    <li class="social-item">
+                    <li class="sidebar__content__social__item">
                         <a href="https://facebook.com/alejandra.carabante.1" class="social-link">
                             <ion-icon name="logo-facebook"></ion-icon>
                         </a>
                     </li>
 
-                    <li class="social-item">
+                    <li class="sidebar__content__social__item">
                         <a href="https://instagram.com/alejandracarabante70" class="social-link">
                             <ion-icon name="logo-instagram"></ion-icon>
                         </a>
                     </li>
 
-                    <!-- <li class="social-item">
+                    <!-- <li class="sidebar__content__social__item">
                         <a href="#" class="social-link">
                             <ion-icon name="logo-twitter"></ion-icon>
                         </a>
@@ -193,26 +196,28 @@
             <article class="about  active" data-page="about">
 
                 <header>
-                    <h2 class="h2 article-title">About me</h2>
+                    <h2 class="h2 article-title">Sobre mi</h2>
                 </header>
 
                 <section class="about-text">
                     <p>
-                        I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and
-                        print media.
-                        I enjoy
-                        turning complex problems into simple, beautiful and intuitive designs.
+                        Nací en San Juan en octubre de 1970. Soy Maestra Nacional
+                        de Dibujo egresada del Centro Polivalente de Arte (1989) y
+                        Profesora de Artes Plásticas, Universidad Nacional de San Juan
+                        (1998).
                     </p>
 
                     <p>
-                        My job is to build your website so that it is functional and user-friendly but at the same time
-                        attractive.
-                        Moreover, I
-                        add personal touch to your product and make sure that is eye-catching and easy to use. My aim is
-                        to bring
-                        across your
-                        message and identity in the most creative way. I created web design for many famous brand
-                        companies.
+                        Artista Visual, Gestora Cultural, Docente de Artes Visuales en
+                        escuela primaria, secundarias y orientadas en Arte.
+                        Desde 1996 trabaja en diversos ámbitos relacionados con el arte
+                        como el teatro, cooperativa de arte y actividades relacionadas a la
+                        educación por el Arte en espacios no formales. Dibujante e
+                        ilustradora. Dicta talleres de Dibujo y pintura y de dibujo con modelo
+                        vivo. Pinta y realiza cerámica escultórica en su taller particular.
+                        Expone regularmente en muestras individuales y colectivas dentro y
+                        fuera de la provincia. Ha participado en salones provinciales e
+                        internacionales y ha obtenido algunos premios y menciones.
                     </p>
                 </section>
 

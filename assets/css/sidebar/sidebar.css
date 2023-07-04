@@ -73,7 +73,7 @@
   .sidebar {
 		width: auto;
 		position: sticky;
-    top: 60px;
+    top: 0;
     max-height: max-content;
     height: 100%;
     margin-bottom: 0;

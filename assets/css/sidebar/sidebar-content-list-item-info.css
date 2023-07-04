@@ -1,0 +1,54 @@
+.sidebar__content__list__item__info {
+  max-width: calc(100% - 46px);
+  width: calc(100% - 46px);
+}
+
+.sidebar__content__list__item__info :is(a, time, address) {
+  color: var(--white-2);
+  font-size: var(--fs-7);
+}
+
+.sidebar__content__list__item__info address {
+  font-style: normal;
+}
+
+.sidebar__content__list__item__info p {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 580 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 580px) {
+
+  .sidebar__content__list__item__info {
+    max-width: calc(100% - 64px);
+    width: calc(100% - 64px);
+  }
+
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 1250 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 1250px) {
+
+  .sidebar__content__list__item__info a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .sidebar__content__list__item__info :is(a, time, address) {
+    --fs-7: 14px;
+    font-weight: var(--fw-300);
+  }
+
+}
