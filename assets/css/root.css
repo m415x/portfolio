@@ -1,4 +1,82 @@
 /*----------------------------------------*\
+  FONT-FACE
+\*----------------------------------------*/
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat/Montserrat-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat/Montserrat-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat/Montserrat-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat/Montserrat-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/futura/FuturaPTLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/futura/FuturaPTBook.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/futura/FuturaPTMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/futura/FuturaPTBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+/*----------------------------------------*\
   CUSTOM PROPERTY
 \*----------------------------------------*/
 
@@ -55,35 +133,10 @@
 
   /** === TYPOGRAPHY === **/
 
-  /* FONT-FACE */
-  @font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/montserrat/Montserrat-Light.otf') format('opentype');
-    font-weight: 300;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/montserrat/Montserrat-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/montserrat/Montserrat-Medium.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/montserrat/Montserrat-SemiBold.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
-  }
-
   /* FONT-FAMILY */
-  --ff-poppins: 'Poppins', sans-serif;
+  --ff-futura: 'Futura PT', sans-serif;
   --ff-montserrat: 'Montserrat', sans-serif;
+  --ff-poppins: 'Poppins', sans-serif;
 
   /* FONT-SIZE */
   --fs-1: 24px;
@@ -120,7 +173,9 @@
 
 
 html {
-  font-family: var(--ff-poppins);
+  /* font-family: var(--ff-poppins); */
+  font-family: var(--ff-montserrat);
+  /* font-family: var(--ff-futura); */
 }
 
 .body {

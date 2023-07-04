@@ -1,0 +1,49 @@
+.sidebar__content {
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-2);
+}
+
+.sidebar.active .sidebar__content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar__content__separator {
+  width: 100%;
+  height: 1px;
+  background: var(--jet);
+  margin: 16px 0;
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 580 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 580px) {
+
+  .sidebar__content__separator {
+    margin: 32px 0;
+  }
+
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 1250 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 1250px) {
+
+  .sidebar__content {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .sidebar__content__separator:last-of-type {
+    margin: 15px 0;
+    opacity: 0;
+  }
+
+}

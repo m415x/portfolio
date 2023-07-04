@@ -1,0 +1,84 @@
+.sidebar {
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 15px;
+	max-height: 112px;
+	overflow: hidden;
+  box-shadow: var(--shadow-1);
+	transition: var(--transition-2);
+  z-index: 1;
+}
+
+.sidebar.active {
+	max-height: 405px;
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 580 PX SCREEN
+\*----------------------------------------*/
+
+ @media screen and (min-width: 580px) {
+
+  .sidebar {
+    width: 520px;
+    margin-inline: auto;
+    padding: 30px;
+		max-height: 180px;
+    margin-bottom: 30px;
+  }
+
+  .sidebar.active {
+		max-height: 584px;
+	}
+
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 768 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+  .sidebar {
+		width: 700px;
+	}
+
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 1024 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 1024px) {
+
+  .sidebar {
+    width: 950px;
+    box-shadow: var(--shadow-5);
+  }
+
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 1250 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 1250px) {
+
+  .sidebar {
+		width: auto;
+		position: sticky;
+    top: 60px;
+    max-height: max-content;
+    height: 100%;
+    margin-bottom: 0;
+    padding-top: 60px;
+    z-index: 1;
+	}
+
+}

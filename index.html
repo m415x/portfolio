@@ -9,23 +9,27 @@
 
     <title>Ale Carabante | Artista</title>
 
-    <!--
-    - favicon
-    -->
+    <!-- * ========== FAVICON ========== * -->
     <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
     <!-- * ========== CUSTOM CSS LINKS ========== * -->
     <link rel="stylesheet" href="./assets/css/root.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/container.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- SIDEBAR -->
+    <link rel="stylesheet" href="./assets/css/sidebar/sidebar.css">
+    <link rel="stylesheet" href="./assets/css/sidebar/sidebar-header.css">
+    <link rel="stylesheet" href="./assets/css/sidebar/sidebar-header-avatar.css">
+    <link rel="stylesheet" href="./assets/css/sidebar/sidebar-header-info.css">
+    <link rel="stylesheet" href="./assets/css/sidebar/sidebar-header-more.css">
+    <link rel="stylesheet" href="./assets/css/sidebar/sidebar-content.css">
+    <link rel="stylesheet" href="./assets/css/sidebar/sidebar-content-list.css">
+    <link rel="stylesheet" href="./assets/css/sidebar/sidebar-content-list-item.css">
+    <link rel="stylesheet" href="./assets/css/sidebar/sidebar-content-list-item-icon.css">
+    
 
-    <!--
-    - google font link
-    -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 
@@ -34,114 +38,108 @@
     <div class="container">
 
         <!-- * ========== SIDEBAR ========== * -->
-
         <aside class="sidebar" data-sidebar>
 
-            <div class="sidebar-info">
+            <header class="sidebar__header">
 
-                <figure class="avatar-box">
-                    <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+                <figure class="sidebar__header__avatar">
+                    <img src="./assets/images/my-avatar.png" alt="Alejandra Carabente" width="80">
                 </figure>
 
-                <div class="info-content">
-                    <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
-
-                    <p class="title">Web developer</p>
+                <div class="sidebar__header__info">
+                    <h1 title="Alejandra Carabante">Alejandra Carabante</h1>
+                    <p>Artista Visual</p>
                 </div>
 
-                <button class="info_more-btn" data-sidebar-btn>
-                    <span>Show Contacts</span>
-
+                <button class="sidebar__header__more" data-sidebar-btn>
+                    <span>Mostrar contactos</span>
                     <ion-icon name="chevron-down"></ion-icon>
                 </button>
+            </header>
 
-            </div>
+            <div class="sidebar__content">
 
-            <div class="sidebar-info_more">
+                <div class="sidebar__content__separator"></div>
 
-                <div class="separator"></div>
+                <ul class="sidebar__content__list">
 
-                <ul class="contacts-list">
+                    <li class="sidebar__content__list__item">
 
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="mail-outline"></ion-icon>
+                        <div class="sidebar__content__list__item__icon">
+                            <!-- <ion-icon name="phone-portrait-outline"></ion-icon> -->
+                            <ion-icon name="logo-whatsapp"></ion-icon>
                         </div>
 
                         <div class="contact-info">
-                            <p class="contact-title">Email</p>
-
-                            <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+                            <p class="contact-title">Teléfono</p>
+                            <a href="https://wa.me/+542645412210" class="contact-link">+54 (264) 541-2210</a>
                         </div>
 
                     </li>
 
-                    <li class="contact-item">
+                    <li class="sidebar__content__list__item">
 
-                        <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        <div class="sidebar__content__list__item__icon">
+                            <!-- <ion-icon name="mail-outline"></ion-icon> -->
+                            <ion-icon name="logo-google"></ion-icon>
                         </div>
 
                         <div class="contact-info">
-                            <p class="contact-title">Phone</p>
-
-                            <a href="https://wa.me/+542644609462" class="contact-link">+1 (213) 352-2795</a>
+                            <p class="contact-title">Gmail</p>
+                            <a href="mailto:alejandracarabante@gmail.com" class="contact-link">alejandracarabante</a>
                         </div>
 
                     </li>
 
-                    <li class="contact-item">
+                    <li class="sidebar__content__list__item">
 
-                        <div class="icon-box">
+                        <div class="sidebar__content__list__item__icon">
                             <ion-icon name="calendar-outline"></ion-icon>
                         </div>
 
                         <div class="contact-info">
-                            <p class="contact-title">Birthday</p>
-
-                            <time datetime="1982-06-23">June 23, 1982</time>
+                            <p class="contact-title">Cumpleaños</p>
+                            <time datetime="1982-06-23">31 Octubre 1970</time>
                         </div>
 
                     </li>
 
-                    <li class="contact-item">
+                    <li class="sidebar__content__list__item">
 
-                        <div class="icon-box">
+                        <div class="sidebar__content__list__item__icon">
                             <ion-icon name="location-outline"></ion-icon>
                         </div>
 
                         <div class="contact-info">
-                            <p class="contact-title">Location</p>
-
-                            <address>Sacramento, California, USA</address>
+                            <p class="contact-title">Ubicación</p>
+                            <address>Rawson, San Juan, Argentina</address>
                         </div>
 
                     </li>
 
                 </ul>
 
-                <div class="separator"></div>
+                <div class="sidebar__content__separator"></div>
 
                 <ul class="social-list">
 
                     <li class="social-item">
-                        <a href="#" class="social-link">
+                        <a href="https://facebook.com/alejandra.carabante.1" class="social-link">
                             <ion-icon name="logo-facebook"></ion-icon>
                         </a>
                     </li>
 
                     <li class="social-item">
-                        <a href="#" class="social-link">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="#" class="social-link">
+                        <a href="https://instagram.com/alejandracarabante70" class="social-link">
                             <ion-icon name="logo-instagram"></ion-icon>
                         </a>
                     </li>
+
+                    <!-- <li class="social-item">
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li> -->
 
                 </ul>
 
@@ -150,7 +148,6 @@
         </aside>
 
         <!-- * ========== MAIN ========== * -->
-
         <main class="main-content">
 
         <!--
@@ -1206,19 +1203,10 @@
 
     </div>
 
-
-
-
-
-
-    <!--
-    - custom js link
-    -->
+    <!-- * ========== CUSTOM JS LINKS ========== * -->
     <script src="./assets/js/script.js"></script>
 
-    <!--
-    - ionicon link
-    -->
+    <!-- * ========== IONICONS LINKS ========== * -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

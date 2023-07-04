@@ -1,0 +1,74 @@
+.sidebar__header__more {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  border-radius: 0 15px;
+  font-size: 13px;
+  color: var(--orange-yellow-crayola);
+  background: var(--border-gradient-onyx);
+  padding: 10px;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+  z-index: 1;
+}
+
+.sidebar__header__more::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--bg-gradient-jet);
+  transition: var(--transition-1);
+  z-index: -1;
+}
+
+.sidebar__header__more:hover,
+.sidebar__header__more:focus {
+  background: var(--bg-gradient-yellow-1);
+}
+
+.sidebar__header__more:hover::before,
+.sidebar__header__more:focus::before {
+  background: var(--bg-gradient-yellow-2);
+}
+
+.sidebar__header__more span {
+  display: none;
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 580 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 580px) {
+
+  .sidebar__header__more {
+    top: -30px;
+    right: -30px;
+    padding: 10px 15px;
+  }
+
+  .sidebar__header__more span {
+    display: block;
+    font-size: var(--fs-8);
+  }
+
+  .sidebar__header__more ion-icon {
+    display: none;
+  }
+
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 1250 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 1250px) {
+
+  .sidebar__header__more {
+    display: none;
+  }
+
+}

@@ -1,0 +1,52 @@
+.sidebar__header__info h1 {
+  color: var(--white-2);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-500);
+  letter-spacing: -0.25px;
+  margin-bottom: 10px;
+}
+
+.sidebar__header__info p {
+  color: var(--white-1);
+  background: var(--onyx);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  width: max-content;
+  padding: 3px 12px;
+  border-radius: 8px;
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 580 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 580px) {
+
+  .sidebar__header__info h1 {
+    margin-bottom: 15px;
+  }
+
+  .sidebar__header__info p {
+    padding: 5px 18px;
+  }
+
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 1250 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 1250px) {
+
+  .sidebar__header__info h1 {
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .sidebar__header__info p {
+    margin: auto;
+  }
+
+}

@@ -1,0 +1,45 @@
+.sidebar__content__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 580 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 580px) {
+
+  .sidebar__content__list {
+    gap: 20px;
+  }
+
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 768 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+  .sidebar__content__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 15px;
+  }
+
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 1250 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 1250px) {
+
+  .sidebar__content__list {
+    grid-template-columns: 1fr;
+  }
+
+}
