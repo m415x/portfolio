@@ -3,16 +3,34 @@
 
 
 // element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+const elementToggleFunc = (elem) => {
+
+  elem.classList.toggle("active");
+
+}
 
 
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+const sidebarSpan = document.querySelector("[data-sidebar-span]");
+const sidebarIcon = document.querySelector("[data-sidebar-icon]");
 
 // sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+sidebarBtn.addEventListener("click", () => {
+
+  elementToggleFunc(sidebar);
+
+  if (sidebarSpan.textContent === "Mostrar contactos") {
+    sidebarSpan.textContent = "Ocultar contactos";
+    sidebarIcon.style.transform = "rotate(180deg)";
+  } else {
+    sidebarSpan.textContent = "Mostrar contactos";
+    sidebarIcon.style.transform = "rotate(0)";
+  }
+
+});
 
 
 
@@ -25,12 +43,15 @@ const overlay = document.querySelector("[data-overlay]");
 // modal variable
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
+const modalDate = document.querySelector("[data-modal-date]");
 const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
-const testimonialsModalFunc = function () {
+const testimonialsModalFunc = () => {
+
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
+
 }
 
 // add click event to all modal items
@@ -41,6 +62,7 @@ for (let i = 0; i < testimonialsItem.length; i++) {
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+    modalDate.innerHTML = this.querySelector("[data-testimonials-date]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
     testimonialsModalFunc();
@@ -61,10 +83,15 @@ const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-select.addEventListener("click", function () { elementToggleFunc(this); });
+select.addEventListener("click", function () {
+
+  elementToggleFunc(this);
+
+});
 
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
+
   selectItems[i].addEventListener("click", function () {
 
     let selectedValue = this.innerText.toLowerCase();
@@ -73,12 +100,13 @@ for (let i = 0; i < selectItems.length; i++) {
     filterFunc(selectedValue);
 
   });
+
 }
 
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function (selectedValue) {
+const filterFunc = (selectedValue) => {
 
   for (let i = 0; i < filterItems.length; i++) {
 
@@ -122,7 +150,8 @@ const formBtn = document.querySelector("[data-form-btn]");
 
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+
+  formInputs[i].addEventListener("input", () => {
 
     // check form validation
     if (form.checkValidity()) {
@@ -132,6 +161,7 @@ for (let i = 0; i < formInputs.length; i++) {
     }
 
   });
+
 }
 
 
@@ -142,10 +172,11 @@ const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
+
   navigationLinks[i].addEventListener("click", function () {
 
     for (let i = 0; i < pages.length; i++) {
-      // if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+
       if (this.dataset.navLink === pages[i].dataset.page) {
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
@@ -154,7 +185,9 @@ for (let i = 0; i < navigationLinks.length; i++) {
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
       }
+
     }
 
   });
+
 }

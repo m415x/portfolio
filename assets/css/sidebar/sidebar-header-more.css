@@ -33,7 +33,12 @@
 }
 
 .sidebar__header__more span {
-  display: none;
+  display: none;  
+}
+
+.sidebar__header__more ion-icon {
+  transition: transform 0.5s;
+  transition: timeout;
 }
 
 
