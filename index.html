@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./assets/css/root.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/container.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <!-- SIDEBAR -->
     <link rel="stylesheet" href="./assets/css/sidebar/sidebar.css">
     <link rel="stylesheet" href="./assets/css/sidebar/sidebar-header.css">
@@ -29,7 +30,18 @@
     <link rel="stylesheet" href="./assets/css/sidebar/sidebar-content-list-item-info.css">
     <link rel="stylesheet" href="./assets/css/sidebar/sidebar-content-social.css">
     <link rel="stylesheet" href="./assets/css/sidebar/sidebar-content-social-item.css">
-    
+    <!-- NAVBAR -->
+    <link rel="stylesheet" href="./assets/css/navbar/navbar.css">
+    <link rel="stylesheet" href="./assets/css/navbar/navbar-list.css">
+    <link rel="stylesheet" href="./assets/css/navbar/navbar-list-item.css">
+    <link rel="stylesheet" href="./assets/css/navbar/navbar-list-item-link.css">
+    <!-- ABOUT -->
+    <link rel="stylesheet" href="./assets/css/about/about.css">
+    <link rel="stylesheet" href="./assets/css/about/about-header.css">
+    <link rel="stylesheet" href="./assets/css/about/about-text.css">
+
+
+
 
 
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -75,7 +87,7 @@
 
                         <div class="sidebar__content__list__item__info">
                             <p>Teléfono</p>
-                            <a href="https://wa.me/+542645412210">+54 (264) 541-2210</a>
+                            <a href="https://wa.me/+542645412210" target="_blank">+54 (264) 541-2210</a>
                         </div>
 
                     </li>
@@ -89,7 +101,7 @@
 
                         <div class="sidebar__content__list__item__info">
                             <p>Gmail</p>
-                            <a href="mailto:alejandracarabante@gmail.com">alejandracarabante</a>
+                            <a href="mailto:alejandracarabante@gmail.com" target="_blank">alejandracarabante</a>
                         </div>
 
                     </li>
@@ -127,19 +139,19 @@
                 <ul class="sidebar__content__social">
 
                     <li class="sidebar__content__social__item">
-                        <a href="https://facebook.com/alejandra.carabante.1" class="social-link">
+                        <a href="https://facebook.com/alejandra.carabante.1" target="_blank">
                             <ion-icon name="logo-facebook"></ion-icon>
                         </a>
                     </li>
 
                     <li class="sidebar__content__social__item">
-                        <a href="https://instagram.com/alejandracarabante70" class="social-link">
+                        <a href="https://instagram.com/alejandracarabante70" target="_blank">
                             <ion-icon name="logo-instagram"></ion-icon>
                         </a>
                     </li>
 
                     <!-- <li class="sidebar__content__social__item">
-                        <a href="#" class="social-link">
+                        <a href="#" target="_blank">
                             <ion-icon name="logo-twitter"></ion-icon>
                         </a>
                     </li> -->
@@ -150,83 +162,68 @@
 
         </aside>
 
-        <!-- * ========== MAIN ========== * -->
-        <main class="main-content">
-
-        <!--
-        - #NAVBAR
-        -->
-
+        <!-- MAIN -->
+        <main class="main">
+            
+            <!-- * ========== NAVBAR ========== * -->
             <nav class="navbar">
 
-                <ul class="navbar-list">
+                <ul class="navbar__list">
 
-                    <li class="navbar-item">
-                        <button class="navbar-link  active" data-nav-link>About</button>
+                    <li class="navbar__list__item">
+                        <button class="navbar__list__item__link active" data-nav-link="about">Sobre mi</button>
                     </li>
 
-                    <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Resume</button>
+                    <li class="navbar__list__item">
+                        <button class="navbar__list__item__link" data-nav-link="resume">Resumen</button>
                     </li>
 
-                    <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Portfolio</button>
+                    <li class="navbar__list__item">
+                        <button class="navbar__list__item__link" data-nav-link="portfolio">Portfolio</button>
                     </li>
 
-                    <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Blog</button>
+                    <li class="navbar__list__item">
+                        <button class="navbar__list__item__link" data-nav-link="blog">Blog</button>
                     </li>
 
-                    <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Contact</button>
+                    <li class="navbar__list__item">
+                        <button class="navbar__list__item__link" data-nav-link="contact">Contacto</button>
                     </li>
 
                 </ul>
 
             </nav>
 
+            <!-- * ========== ABOUT ========== * -->
+            <article class="about active" data-page="about">
 
-
-
-
-        <!--
-        - #ABOUT
-        -->
-
-            <article class="about  active" data-page="about">
-
-                <header>
-                    <h2 class="h2 article-title">Sobre mi</h2>
+                <header class="about__header">
+                    <h2 class="h2">Sobre mi</h2>
                 </header>
 
-                <section class="about-text">
+                <section class="about__text">
                     <p>
                         Nací en San Juan en octubre de 1970. Soy Maestra Nacional
                         de Dibujo egresada del Centro Polivalente de Arte (1989) y
-                        Profesora de Artes Plásticas, Universidad Nacional de San Juan
-                        (1998).
+                        Profesora de Artes Plásticas de la Universidad Nacional de 
+                        San Juan (1998).
                     </p>
-
                     <p>
                         Artista Visual, Gestora Cultural, Docente de Artes Visuales en
                         escuela primaria, secundarias y orientadas en Arte.
-                        Desde 1996 trabaja en diversos ámbitos relacionados con el arte
+                        Desde 1996 trabajo en diversos ámbitos relacionados con el arte
                         como el teatro, cooperativa de arte y actividades relacionadas a la
                         educación por el Arte en espacios no formales. Dibujante e
-                        ilustradora. Dicta talleres de Dibujo y pintura y de dibujo con modelo
-                        vivo. Pinta y realiza cerámica escultórica en su taller particular.
-                        Expone regularmente en muestras individuales y colectivas dentro y
-                        fuera de la provincia. Ha participado en salones provinciales e
-                        internacionales y ha obtenido algunos premios y menciones.
+                        ilustradora. Dicto talleres de Dibujo y pintura, y de dibujo con modelo
+                        vivo. Pinto y realizo cerámica escultórica en mi taller particular.
+                        Expongo regularmente en muestras individuales y colectivas dentro y
+                        fuera de la provincia. He participado en salones provinciales e
+                        internacionales obteniendo algunos premios y menciones.
                     </p>
                 </section>
 
-
-                <!--
-                - service
-                -->
-
-                <section class="service">
+                <!-- SERVICE -->
+                <section class="about__service">
 
                     <h3 class="h3 service-title">What i'm doing</h3>
 
@@ -527,7 +524,7 @@
             <article class="resume" data-page="resume">
 
                 <header>
-                    <h2 class="h2 article-title">Resume</h2>
+                    <h2 class="h2 about__header__title">Resumen</h2>
                 </header>
 
                 <section class="timeline">
@@ -726,7 +723,7 @@
             <article class="portfolio" data-page="portfolio">
 
                 <header>
-                    <h2 class="h2 article-title">Portfolio</h2>
+                    <h2 class="h2 about__header__title">Portfolio</h2>
                 </header>
 
                 <section class="projects">
@@ -966,7 +963,7 @@
             <article class="blog" data-page="blog">
 
                 <header>
-                    <h2 class="h2 article-title">Blog</h2>
+                    <h2 class="h2 about__header__title">Blog</h2>
                 </header>
 
                 <section class="blog-posts">
@@ -1165,7 +1162,7 @@
             <article class="contact" data-page="contact">
 
                 <header>
-                    <h2 class="h2 article-title">Contact</h2>
+                    <h2 class="h2 about__header__title">Contacto</h2>
                 </header>
 
                 <section class="mapbox" data-mapbox>

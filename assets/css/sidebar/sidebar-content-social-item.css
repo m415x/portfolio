@@ -1,8 +1,8 @@
-.sidebar__content__social__item .social-link {
+.sidebar__content__social__item a {
   color: var(--light-gray-70);
-  font-size: 18px;
+  font-size: var(--fs-1);
 }
 
-.sidebar__content__social__item .social-link:hover {
+.sidebar__content__social__item a:hover {
   color: var(--light-gray);
 }

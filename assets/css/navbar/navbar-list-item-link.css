@@ -1,0 +1,40 @@
+.navbar__list__item__link {
+  color: var(--light-gray);
+  font-size: var(--fs-8);
+  padding: 20px 7px;
+  transition: color var(--transition-1);
+}
+
+.navbar__list__item__link:is(:hover, :focus) {
+  color: var(--light-gray-70);
+}
+
+.navbar__list__item__link.active {
+  color: var(--orange-yellow-crayola);
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 580 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 580px) {
+
+  .navbar__list__item__link {
+    --fs-8: 14px;
+  }
+
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 1024 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 1024px) {
+
+  .navbar__list__item__link {
+    font-weight: var(--fw-500);
+  }
+
+}
