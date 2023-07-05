@@ -38,7 +38,6 @@
 
 .sidebar__header__more ion-icon {
   transition: transform 0.5s;
-  transition: timeout;
 }
 
 
