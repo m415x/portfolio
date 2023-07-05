@@ -1,0 +1,16 @@
+.about__testimonials__title {
+    margin-bottom: 20px;
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 580 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 580px) {
+
+    .about__testimonials__title {
+        margin-bottom: 25px;
+    }
+  
+  }

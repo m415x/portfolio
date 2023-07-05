@@ -1,0 +1,21 @@
+.about__service__list__item__icon {
+  margin-bottom: 10px;
+}
+
+.about__service__list__item__icon img {
+  margin: auto;
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 580 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 580px) {
+
+  .about__service__list__item__icon {
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+
+}

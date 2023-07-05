@@ -1,66 +1,3 @@
-.h2,
-.h3,
-.h4,
-.h5 {
-  color: var(--white-2);
-  text-transform: capitalize;
-}
-
-.h2 { font-size: var(--fs-1); }
-
-.h3 { font-size: var(--fs-2); }
-
-.h4 { font-size: var(--fs-4); }
-
-.h5 {
-  font-size: var(--fs-7);
-  font-weight: var(--fw-500);
-}
-
-article {
-  background: var(--eerie-black-2);
-  border: 1px solid var(--jet);
-  border-radius: 20px;
-  padding: 15px;
-  box-shadow: var(--shadow-1);
-  z-index: 1;
-  display: none;
-}
-
-article.active {
-  display: block;
-  animation: fade 0.5s ease backwards;
-}
-
-
-/*----------------------------------------*\
-  RESPONSIVE LARGER THAN 580 PX SCREEN
-\*----------------------------------------*/
-
-@media screen and (min-width: 580px) {
-
-  article {
-    width: 520px;
-    margin-inline: auto;
-    padding: 30px;
-  }
-
-}
-
-
-/*----------------------------------------*\
-  RESPONSIVE LARGER THAN 768 PX SCREEN
-\*----------------------------------------*/
-
-@media screen and (min-width: 768px) {
-
-  article {
-    width: 700px;
-  }
-
-}
-
-
 /*----------------------------------------*\
   RESPONSIVE LARGER THAN 1024 PX SCREEN
 \*----------------------------------------*/
@@ -71,11 +8,6 @@ article.active {
     position: relative;
     width: max-content;
     margin: auto;
-  }
-
-  article {
-    width: 950px;
-    box-shadow: var(--shadow-5);
   }
 
 }
@@ -91,11 +23,6 @@ article.active {
     min-width: 75%;
     width: 75%;
     margin: 0;
-  }
-
-  article {
-    width: auto;
-    min-height: 100%;
   }
 
 }

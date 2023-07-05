@@ -1,0 +1,17 @@
+.about__testimonials__list__item {
+  min-width: 100%;
+  scroll-snap-align: center;
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 1024 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 1024px) {
+
+  .about__testimonials__list__item {
+    min-width: calc(50% - 15px);
+  }
+
+}

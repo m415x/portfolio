@@ -1,0 +1,27 @@
+.about__service__list__item__content {
+  text-align: center;
+}
+
+.about__service__list__item__content h4 {
+  margin-bottom: 7px;
+}
+
+.about__service__list__item__content p {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-3);
+  line-height: 1.6;
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 580 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 580px) {
+
+  .about__service__list__item__content {
+    text-align: left;
+  }
+
+}

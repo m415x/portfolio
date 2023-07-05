@@ -176,6 +176,7 @@ html {
   /* font-family: var(--ff-poppins); */
   font-family: var(--ff-montserrat);
   /* font-family: var(--ff-futura); */
+  letter-spacing: 0.5px;
 }
 
 .body {

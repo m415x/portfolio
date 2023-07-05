@@ -1,0 +1,17 @@
+.about__testimonials__list__item__card__title {
+  margin-bottom: 7px;
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 580 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 580px) {
+
+  .about__testimonials__list__item__card__title {
+    margin-bottom: 10px;
+    margin-left: 95px;
+  }
+
+}

@@ -1,0 +1,19 @@
+.about__service__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 1024 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 1024px) {
+
+  .about__service__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 25px;
+  }
+
+}
