@@ -3,6 +3,9 @@
   border-radius: 20px;
 }
 
+.sidebar__header__avatar img {
+  border-radius: 20px;
+}
 
 /*----------------------------------------*\
   RESPONSIVE LARGER THAN 580 PX SCREEN
@@ -16,6 +19,7 @@
   
   .sidebar__header__avatar img {
     width: 120px;
+    border-radius: 30px;
   }
 
 }

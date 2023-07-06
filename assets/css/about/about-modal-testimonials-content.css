@@ -1,0 +1,15 @@
+.about__modal__testimonials__content h4 { margin-bottom: 4px; }
+
+.about__modal__testimonials__content time {
+  font-size: var(--fs-6);
+  color: var(--light-gray-70);
+  font-weight: var(--fw-300);
+  margin-bottom: 10px;
+}
+
+.about__modal__testimonials__content p {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}

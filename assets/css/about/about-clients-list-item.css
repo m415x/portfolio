@@ -1,0 +1,53 @@
+.about__clients__list__item {
+  min-width: 50%;
+  scroll-snap-align: start;
+}
+
+.about__clients__list__item img {
+  width: 100%;
+  filter: grayscale(1);
+  transition: var(--transition-1);
+}
+
+.about__clients__list__item img:hover {
+  filter: grayscale(0);
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 450 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 450px) {
+
+  .about__clients__list__item {
+    min-width: calc(33.33% - 10px);
+  }
+
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 580 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 580px) {
+
+  .about__clients__list__item {
+    min-width: calc(33.33% - 35px);
+  }
+
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 1024 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 1024px) {
+
+  .about__clients__list__item {
+    min-width: calc(25% - 38px);
+  }
+
+}
