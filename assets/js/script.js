@@ -1,5 +1,9 @@
 'use strict';
 
+import { loadTestimonials } from "../js/modules/fetch-testimonials.mjs";
+
+loadTestimonials();
+
 
 
 // element toggle function
@@ -66,6 +70,7 @@ for (let i = 0; i < testimonialsItem.length; i++) {
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
     testimonialsModalFunc();
+    console.log('Click')
 
   });
 
