@@ -1,6 +1,6 @@
 'use strict';
 
-import { loadTestimonials } from "../js/modules/fetch-testimonials.mjs";
+import { loadTestimonials } from "./modules/fetch-testimonials.mjs";
 
 loadTestimonials();
 
@@ -51,8 +51,8 @@ const modalDate = document.querySelector("[data-modal-date]");
 const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
-const testimonialsModalFunc = () => {
-
+const testimonialsModalFunc = function () {
+  console.log('testimonialsModalFunc')
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 
@@ -61,7 +61,7 @@ const testimonialsModalFunc = () => {
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
 
-  testimonialsItem[i].addEventListener("click", function () {
+  testimonialsItem[i].addEventListener("click", function (event) {
 
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
@@ -70,7 +70,6 @@ for (let i = 0; i < testimonialsItem.length; i++) {
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
     testimonialsModalFunc();
-    console.log('Click')
 
   });
 
