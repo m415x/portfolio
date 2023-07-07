@@ -1,0 +1,59 @@
+{
+  "header": {
+    "avatar": "./assets/images/avatar-ale.png",
+    "name": "Alejandra Carabante",
+    "profession": "Artista Visual"
+  },
+  "contacts": [
+    {
+      "icon": "logo-whatsapp",
+      "title": "Teléfono",
+      "link": "https://wa.me/+542645412210",
+      "text": "+54 (264) 541-2210"
+    },
+    {
+      "icon": "logo-google",
+      "title": "Gmail",
+      "link": "mailto:alejandracarabante@gmail.com",
+      "text": "alejandracarabante"
+    },
+    {
+      "icon": "calendar-outline",
+      "title": "Cumpleaños",
+      "link": "",
+      "text": "31 Octubre 1970"
+    },
+    {
+      "icon": "location-outline",
+      "title": "Ubicación",
+      "link": "",
+      "text": "Rawson, San Juan, Argentina"
+    }
+  ],
+  "socials": [
+    {
+      "icon": "logo-whatsapp",
+      "title": "Teléfono",
+      "link": "https://wa.me/+542645412210",
+      "text": "+54 (264) 541-2210"
+    },
+    {
+      "icon": "logo-google",
+      "title": "Gmail",
+      "link": "mailto:alejandracarabante@gmail.com",
+      "text": "alejandracarabante"
+    },
+    {
+      "icon": "calendar-outline",
+      "title": "Cumpleaños",
+      "link": "",
+      "text": "31 Octubre 1970"
+    },
+    {
+      "icon": "location-outline",
+      "title": "Ubicación",
+      "link": "",
+      "text": "Rawson, San Juan, Argentina"
+    }
+  ]
+}
