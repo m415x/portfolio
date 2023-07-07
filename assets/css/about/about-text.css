@@ -3,6 +3,7 @@
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  margin-bottom: 35px;
 }
 
 .about__text p {

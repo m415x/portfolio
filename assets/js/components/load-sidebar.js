@@ -46,32 +46,22 @@ fetch("../assets/data/sidebar.json")
     });
 
     // Social list data
-    // data.socials.forEach(social => {
-    //   const listItem = document.createElement("li");
-    //   listItem.classList.add("sidebar__content__list__item");
+    data.socials.forEach(social => {
+      const listItem = document.createElement("li");
+      listItem.classList.add("sidebar__content__social__item");
 
-    //   const iconDiv = document.createElement("div");
-    //   iconDiv.classList.add("sidebar__content__list__item__icon");
-    //   const icon = document.createElement("ion-icon");
-    //   icon.setAttribute("name", contact.icon);
-    //   iconDiv.appendChild(icon);
+      const itemA = document.createElement("a");
+      itemA.target = "_blank";
+      itemA.href = social.link;
 
-    //   const infoDiv = document.createElement("div");
-    //   infoDiv.classList.add("sidebar__content__list__item__info");
-    //   const title = document.createElement("p");
-    //   title.textContent = contact.title;
-    //   const link = document.createElement("a");
-    //   link.href = contact.link;
-    //   link.target = "_blank";
-    //   link.textContent = contact.text;
-    //   infoDiv.appendChild(title);
-    //   infoDiv.appendChild(link);
+      const icon = document.createElement("ion-icon");
+      icon.setAttribute("name", social.icon);
+      itemA.appendChild(icon);
 
-    //   listItem.appendChild(iconDiv);
-    //   listItem.appendChild(infoDiv);
+      listItem.appendChild(itemA);
 
-    //   sidebarContactList.appendChild(listItem);
-    // });
+      sidebarSocialList.appendChild(listItem);
+    });
 
   })
   .catch(error => {

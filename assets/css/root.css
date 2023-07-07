@@ -87,48 +87,57 @@
   /* GRADIENT */
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    #3f3f40 3%, 
+    #303030 97%
   );
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+    #2d2d2e40 0%, 
+    #1b1b1d00 100%
+  ), #202022;
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
-    hsla(36, 100%, 69%, 0) 50%
+    #ffda6b 0%, 
+    #ffc06100 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 13%);
+    #ffda6b40 0%, 
+    #ffbb5c00 59.86%
+  ), #202022;
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
-    hsla(0, 0%, 25%, 0) 50%
+    #404040 0%, 
+    #40404000 50%
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    #ffdb70, 
+    #ffbb5c
   );
 
   /* SOLID */
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
-  --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --jet: #383838;
+  /* --onyx: #2b2b2c; */
+  --onyx: #35393c;
+  --eerie-black-1: #202022;
+  --eerie-black-2: #1e1e1f;
+  --smoky-black: #121212;
+  --white-1: #ffffff;
+  --white-2: #fafafa;
+  --orange-yellow-crayola: #ffdb70;
+  --vegas-gold: #ceb15a;
+  /* --light-gray: #d6d6d6;
+  --light-gray-70: #d6d6d6b3; */
+  --light-gray: #e3dac9;
+  --light-gray-70: #e3dac9b3;
+  --bittersweet-shimmer: #b84c4c;
+
+  /* CLIENT CUSTOM COLORS */
+  --custom-black: #000000;
+  --custom-onyx: #35393c;
+  --custom-gray: #757978;
+  --custom-bone: #e3dac9;
 
 
   /** === TYPOGRAPHY === **/
@@ -157,11 +166,11 @@
 
   /** === SHADOW === **/
 
-  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
-  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
-  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
-  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  --shadow-1: -4px 8px 24px #00000040;
+  --shadow-2: 0 16px 30px #00000040;
+  --shadow-3: 0 16px 40px #00000040;
+  --shadow-4: 0 25px 50px #00000026;
+  --shadow-5: 0 24px 80px #00000040;
 
 
   /** === TRANSITION === **/
