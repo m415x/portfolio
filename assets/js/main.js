@@ -1,8 +1,7 @@
 'use strict';
 
 
-
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
 
   // element toggle function
   const elementToggleFunc = (elem) => {
@@ -190,4 +189,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
-});
+}
