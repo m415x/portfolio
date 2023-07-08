@@ -5,6 +5,7 @@ const aboutTextSection = document.querySelector("[data-about-text]");
 fetch("../assets/data/about.json")
   .then(response => response.json())
   .then(data => {
+
     // Render <p> elements from JSON
     data.paragraphs.forEach(paragraph => {
       const p = document.createElement("p");

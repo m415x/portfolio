@@ -20,13 +20,13 @@
     {
       "icon": "calendar-outline",
       "title": "Cumpleaños",
-      "link": "",
+      "link": "#",
       "text": "31 Octubre 1970"
     },
     {
       "icon": "location-outline",
       "title": "Ubicación",
-      "link": "",
+      "link": "#",
       "text": "Rawson, San Juan, Argentina"
     }
   ],

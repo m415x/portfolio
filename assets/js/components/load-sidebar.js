@@ -34,7 +34,9 @@ fetch("../assets/data/sidebar.json")
       title.textContent = contact.title;
       const link = document.createElement("a");
       link.href = contact.link;
-      link.target = "_blank";
+      if (contact.link !== "" && contact.link !== "#") {
+        link.target = "_blank";
+      }
       link.textContent = contact.text;
       infoDiv.appendChild(title);
       infoDiv.appendChild(link);
@@ -51,8 +53,10 @@ fetch("../assets/data/sidebar.json")
       listItem.classList.add("sidebar__content__social__item");
 
       const itemA = document.createElement("a");
-      itemA.target = "_blank";
       itemA.href = social.link;
+      if (social.link !== "" && social.link !== "#") {
+        itemA.target = "_blank";
+      }
 
       const icon = document.createElement("ion-icon");
       icon.setAttribute("name", social.icon);

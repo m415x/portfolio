@@ -1,0 +1,32 @@
+.portfolio__project{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 768 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+  .portfolio__project{
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 1024 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 1024px) {
+
+  .portfolio__project{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}

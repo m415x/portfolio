@@ -1,0 +1,29 @@
+.portfolio__filter-list {
+  display: none;
+}
+
+.portfolio__filter-select {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 768 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+  .portfolio__filter-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    padding-left: 5px;
+    margin-bottom: 30px;
+  }
+
+  .portfolio__filter-select {
+    display: none;
+  }
+}
