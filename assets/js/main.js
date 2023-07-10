@@ -77,56 +77,56 @@ window.onload = () => {
 
 
   // custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-select-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
+  const select = document.querySelector("[data-select]");
+  const selectItems = document.querySelectorAll("[data-select-item]");
+  const selectValue = document.querySelector("[data-select-value]");
+  const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-select.addEventListener("click", function () {
-  elementToggleFunc(this);
-});
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
+  select.addEventListener("click", function () {
+    elementToggleFunc(this);
   });
-}
 
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
+  // add event in all select items
+  for (let i = 0; i < selectItems.length; i++) {
+    selectItems[i].addEventListener("click", function () {
+      let selectedValue = this.innerText.toLowerCase();
+      selectValue.innerText = this.innerText;
+      elementToggleFunc(select);
+      filterFunc(selectedValue);
+    });
+  }
 
-const filterFunc = (selectedValue) => {
-  for (let i = 0; i < filterItems.length; i++) {
-    const categoryList = filterItems[i].dataset.category.split(", ");
-    if (selectedValue === "todas" || categoryList.includes(selectedValue)) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
+  // filter variables
+  const filterItems = document.querySelectorAll("[data-filter-item]");
+
+  const filterFunc = (selectedValue) => {
+    for (let i = 0; i < filterItems.length; i++) {
+      const categoryList = filterItems[i].dataset.category.split(", ");
+      if (selectedValue === "todas" || categoryList.includes(selectedValue)) {
+        filterItems[i].classList.add("active");
+      } else {
+        filterItems[i].classList.remove("active");
+      }
     }
   }
-}
 
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
+  // add event in all filter button items for large screen
+  let lastClickedBtn = filterBtn[0];
 
-for (let i = 0; i < filterBtn.length; i++) {
-  filterBtn[i].addEventListener("click", function () {
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-  });
-}
-
+  for (let i = 0; i < filterBtn.length; i++) {
+    filterBtn[i].addEventListener("click", function () {
+      let selectedValue = this.innerText.toLowerCase();
+      selectValue.innerText = this.innerText;
+      filterFunc(selectedValue);
+      lastClickedBtn.classList.remove("active");
+      this.classList.add("active");
+      lastClickedBtn = this;
+    });
+  }
 
 
-  // contact form variables
+
+  /*// contact form variables
   const form = document.querySelector("[data-form]");
   const formInputs = document.querySelectorAll("[data-form-input]");
   const formBtn = document.querySelector("[data-form-btn]");
@@ -145,7 +145,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 
     });
 
-  }
+  }*/
 
 
 
@@ -174,5 +174,8 @@ for (let i = 0; i < filterBtn.length; i++) {
     });
 
   }
+
+  const loader = document.querySelector("[data-loader]");
+    loader.style.display = "none";
 
 }
