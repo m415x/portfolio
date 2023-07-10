@@ -1,8 +1,9 @@
 .portfolio__project{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  margin-bottom: 10px;
+  gap: 1rem;
+  padding: 0.5rem;
+  column-count: 2;
+  --webkit-column-count: 2;
+  --moz-column-count: 2;
 }
 
 
@@ -13,20 +14,9 @@
 @media screen and (min-width: 768px) {
 
   .portfolio__project{
-    grid-template-columns: 1fr 1fr;
-  }
-
-}
-
-
-/*----------------------------------------*\
-  RESPONSIVE LARGER THAN 1024 PX SCREEN
-\*----------------------------------------*/
-
-@media screen and (min-width: 1024px) {
-
-  .portfolio__project{
-    grid-template-columns: repeat(3, 1fr);
+    column-count: 3;
+    --webkit-column-count: 3;
+    --moz-column-count: 3;
   }
 
 }

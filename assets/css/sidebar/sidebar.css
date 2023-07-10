@@ -44,7 +44,7 @@
 @media screen and (min-width: 768px) {
 
   .sidebar {
-		width: 700px;
+		width: 90vw;
 	}
 
 }
@@ -57,7 +57,7 @@
 @media screen and (min-width: 1024px) {
 
   .sidebar {
-    width: 950px;
+    width: 90vw;
     box-shadow: var(--shadow-5);
   }
 

@@ -2,121 +2,24 @@
   display: none;
 }
 
-.portfolio__project__item.active {
-  display: block;
-  animation: scaleUp 0.25s ease forwards;
-}
-
 @keyframes scaleUp {
   0% { transform: scale(0.5); }
   100% { transform: scale(1); }
 }
 
-.portfolio__project__item > a {
+.portfolio__project__item.active {
+  display: block;
+  animation: scaleUp 0.25s ease forwards;
+  margin-bottom: 1rem;
+}
+
+.portfolio__project__item > img {
   width: 100%;
 }
 
-.portfolio__project__item > a:hover figure::before {
-  background: #00000080;
-}
-
-.portfolio__project__item figure {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  border-radius: 16px;
-  overflow: hidden;
-  margin-bottom: 15px;
-}
-
-.portfolio__project__item figure::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  z-index: 1;
-  transition: var(--transition-1);
-}
-
-.portfolio__project__item figure div {
-  --scale: 0.8;
-  background: var(--jet);
-  color: var(--orange-yellow-crayola);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(var(--scale));
-  font-size: 20px;
-  padding: 18px;
-  border-radius: 12px;
-  opacity: 0;
-  z-index: 1;
-  transition: var(--transition-1);
-}
-
-.portfolio__project__item > a:hover .portfolio__project__item figure div {
-  --scale: 1;
-  opacity: 1;
-}
-
-.portfolio__project__item figure div ion-icon {
-  --ionicon-stroke-width: 50px;
-}
-
-.portfolio__project__item figure img {
+.portfolio__project__item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: var(--transition-1);
-}
-
-.portfolio__project__item > a:hover img {
-  transform: scale(1.1);
-}
-
-.portfolio__project__item :is(h3, p) {
-  margin-left: 10px;
-}
-
-.portfolio__project__item h3 {
-  color: var(--white-2);
-  font-size: var(--fs-5);
-  font-weight: var(--fw-400);
-  text-transform: capitalize;
-  line-height: 1.3;
-}
-
-.portfolio__project__item p {
-  color: var(--light-gray-70);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-300);
-}
-
-
-/*----------------------------------------*\
-  RESPONSIVE LARGER THAN 450 PX SCREEN
-\*----------------------------------------*/
-
-@media screen and (min-width: 450px) {
-
-  .portfolio__project__item figure {
-    height: auto;
-  }
-
-}
-
-
-/*----------------------------------------*\
-  RESPONSIVE LARGER THAN 580 PX SCREEN
-\*----------------------------------------*/
-
-@media screen and (min-width: 580px) {
-
-  .portfolio__project__item figure {
-    border-radius: 16px;
-  }
-
 }

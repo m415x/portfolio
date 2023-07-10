@@ -12,7 +12,7 @@
 @media screen and (min-width: 580px) {
 
   main {
-    margin-top: 60px;
+    /* margin-top: 60px; */
     margin-bottom: 100px;
   }
 
@@ -39,7 +39,7 @@
 @media screen and (min-width: 1250px) {
 
   .container {
-    max-width: 1200px;
+    max-width: 90vw;
     margin-inline: auto;
     display: flex;
     justify-content: center;

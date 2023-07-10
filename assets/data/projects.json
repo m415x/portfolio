@@ -1,25 +1,112 @@
 {
   "projects": [
     {
-      "category": "tinta - acuarela",
-      "link": "#",
+      "category": "tinta, acuarela",
       "image": "./media/prueba01.jpg",
       "title": "La rebelión de los galgos las aves y los peces",
-      "description": "Dibujo coloreado con acuarelas sobre papel. 2021"
+      "date": "2021",
+      "type": "Acuarelas sobre papel",
+      "dimensions": "",
+      "description": ""
     },
     {
-      "category": "tinta - acuarela",
-      "link": "#",
+      "category": "tinta, acuarela",
       "image": "./media/prueba02.jpg",
       "title": "Onirico previo a la colmena",
-      "description": "Expuesta en la Feria Provincial del Libro y la cultura en el Centro Cultural la Superiora en mi querido Rawson. 2020. Acrilico sobre tela. 80x 1m"
+      "date": "2020",
+      "type": "Acrilico sobre tela",
+      "dimensions": "80x100cm",
+      "description": "Expuesta en la Feria Provincial del Libro y la cultura en el Centro Cultural la Superiora en mi querido Rawson."
     },
     {
       "category": "tinta",
-      "link": "#",
       "image": "./media/prueba03.jpg",
       "title": "El almuerzo del domingo",
-      "description": "Dibujo a lápices acuarelables sobre papel 300gr tinta y collage. 50cm x 70 cm . 2020"
+      "date": "2020",
+      "type": "Dibujo a lápices acuarelables sobre papel 300gr tinta y collage",
+      "dimensions": "50x70cm",
+      "description": ""
+    },
+    {
+      "category": "acuarela",
+      "image": "./media/prueba01.jpg",
+      "title": "La rebelión de los galgos las aves y los peces",
+      "date": "2021",
+      "type": "Acuarelas sobre papel",
+      "dimensions": "",
+      "description": ""
+    },
+    {
+      "category": "grafito, acuarela",
+      "image": "./media/prueba02.jpg",
+      "title": "Onirico previo a la colmena",
+      "date": "2020",
+      "type": "Acrilico sobre tela",
+      "dimensions": "80x100cm",
+      "description": "Expuesta en la Feria Provincial del Libro y la cultura en el Centro Cultural la Superiora en mi querido Rawson."
+    },
+    {
+      "category": "grafito",
+      "image": "./media/prueba03.jpg",
+      "title": "El almuerzo del domingo",
+      "date": "2020",
+      "type": "Dibujo a lápices acuarelables sobre papel 300gr tinta y collage",
+      "dimensions": "50x70cm",
+      "description": ""
+    },
+    {
+      "category": "tinta, acuarela",
+      "image": "./media/prueba01.jpg",
+      "title": "La rebelión de los galgos las aves y los peces",
+      "date": "2021",
+      "type": "Acuarelas sobre papel",
+      "dimensions": "",
+      "description": ""
+    },
+    {
+      "category": "tinta, acuarela",
+      "image": "./media/prueba02.jpg",
+      "title": "Onirico previo a la colmena",
+      "date": "2020",
+      "type": "Acrilico sobre tela",
+      "dimensions": "80x100cm",
+      "description": "Expuesta en la Feria Provincial del Libro y la cultura en el Centro Cultural la Superiora en mi querido Rawson."
+    },
+    {
+      "category": "tinta",
+      "image": "./media/prueba03.jpg",
+      "title": "El almuerzo del domingo",
+      "date": "2020",
+      "type": "Dibujo a lápices acuarelables sobre papel 300gr tinta y collage",
+      "dimensions": "50x70cm",
+      "description": ""
+    },
+    {
+      "category": "tinta, acuarela",
+      "image": "./media/prueba01.jpg",
+      "title": "La rebelión de los galgos las aves y los peces",
+      "date": "2021",
+      "type": "Acuarelas sobre papel",
+      "dimensions": "",
+      "description": ""
+    },
+    {
+      "category": "tinta, acuarela",
+      "image": "./media/prueba02.jpg",
+      "title": "Onirico previo a la colmena",
+      "date": "2020",
+      "type": "Acrilico sobre tela",
+      "dimensions": "80x100cm",
+      "description": "Expuesta en la Feria Provincial del Libro y la cultura en el Centro Cultural la Superiora en mi querido Rawson."
+    },
+    {
+      "category": "tinta",
+      "image": "./media/prueba03.jpg",
+      "title": "El almuerzo del domingo",
+      "date": "2020",
+      "type": "Dibujo a lápices acuarelables sobre papel 300gr tinta y collage",
+      "dimensions": "50x70cm",
+      "description": ""
     }
   ]
 }

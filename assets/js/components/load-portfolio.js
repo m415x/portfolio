@@ -13,40 +13,25 @@ fetch("../assets/data/projects.json")
 
     // Generate the HTML elements for each project
     data.projects.forEach(project => {
-      uniqueCategories.add(project.category);
+      const categories = project.category.split(", ");
+      categories.forEach(category => uniqueCategories.add(category));
 
       const listItem = document.createElement("li");
       listItem.classList.add("portfolio__project__item", "active");
       listItem.setAttribute("data-filter-item", "");
       listItem.setAttribute("data-category", project.category);
 
-      const link = document.createElement("a");
-      link.href = project.link;
-
-      const figure = document.createElement("figure");
-
-      const iconDiv = document.createElement("div");
-      const icon = document.createElement("ion-icon");
-      icon.setAttribute("name", "eye-outline");
-      iconDiv.appendChild(icon);
-
       const image = document.createElement("img");
       image.src = project.image;
       image.alt = project.title;
+      image.setAttribute("data-project-title", project.title);
+      image.setAttribute("data-project-date", project.date);
+      image.setAttribute("data-project-type", project.type);
+      image.setAttribute("data-project-dimensions", project.dimensions);
+      image.setAttribute("data-project-description", project.description);
       image.setAttribute("loading", "lazy");
 
-      const title = document.createElement("h3");
-      title.textContent = project.title;
-
-      const description = document.createElement("p");
-      description.textContent = project.description;
-
-      figure.appendChild(iconDiv);
-      figure.appendChild(image);
-      link.appendChild(figure);
-      link.appendChild(title);
-      link.appendChild(description);
-      listItem.appendChild(link);
+      listItem.appendChild(image);
       projectList.appendChild(listItem);
     });
 
