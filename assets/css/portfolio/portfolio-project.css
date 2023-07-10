@@ -1,5 +1,5 @@
 .portfolio__project{
-  gap: 1rem;
+  gap: 0.5rem;
   padding: 0.5rem;
   column-count: 2;
   --webkit-column-count: 2;
@@ -14,6 +14,7 @@
 @media screen and (min-width: 768px) {
 
   .portfolio__project{
+    gap: 1rem;
     column-count: 3;
     --webkit-column-count: 3;
     --moz-column-count: 3;

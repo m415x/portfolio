@@ -10,11 +10,17 @@ fetch("../assets/data/projects.json")
 
     // Create a set to store unique categories
     const uniqueCategories = new Set();
+    // const area = new Array();
 
     // Generate the HTML elements for each project
     data.projects.forEach(project => {
       const categories = project.category.split(", ");
+      // console.log(categories)
       categories.forEach(category => uniqueCategories.add(category));
+
+      // const dimensions = project.dimensions.split(", ");
+      // console.log(dimensions)
+      // dimensions.forEach(dimension => area.add(dimension));
 
       const listItem = document.createElement("li");
       listItem.classList.add("portfolio__project__item", "active");

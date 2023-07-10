@@ -7,14 +7,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--eerie-black-2);
   z-index:999;
   transition: all 1s 1s ease-out;
-  opacity:1;
-}
-.loaded {
-  opacity:0;
-  z-index:-1;
 }
 
 @keyframes rotation {
@@ -29,7 +24,7 @@
 .loader__spinner {
   width: 48px;
   height: 48px;
-  border: 5px solid #623ddb;
+  border: 5px solid var(--vegas-gold);
   border-bottom-color: transparent;
   border-radius: 50%;
   display: inline-block;

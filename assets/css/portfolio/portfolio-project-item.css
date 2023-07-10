@@ -10,7 +10,7 @@
 .portfolio__project__item.active {
   display: block;
   animation: scaleUp 0.25s ease forwards;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .portfolio__project__item > img {
@@ -22,4 +22,17 @@
   height: 100%;
   object-fit: cover;
   transition: var(--transition-1);
+}
+
+
+/*----------------------------------------*\
+  RESPONSIVE LARGER THAN 768 PX SCREEN
+\*----------------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+  .portfolio__project__item.active {
+    margin-bottom: 1rem;
+  }
+
 }
