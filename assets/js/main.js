@@ -9,7 +9,7 @@ window.onload = () => {
   }
 
 
-
+  /* * ========== SIDEBAR ========== * */
   // sidebar variables
   const sidebar = document.querySelector("[data-sidebar]");
   const sidebarBtn = document.querySelector("[data-sidebar-btn]");
@@ -32,7 +32,7 @@ window.onload = () => {
   });
 
 
-
+  /* * ========== TESTIMONIALS ========== * */
   // testimonials variables
   const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
   const modalContainer = document.querySelector("[data-modal-container]");
@@ -75,7 +75,7 @@ window.onload = () => {
   overlay.addEventListener("click", testimonialsModalFunc);
 
 
-
+  /* * ========== FILTERS ========== * */
   // custom select variables
   const select = document.querySelector("[data-select]");
   const selectItems = document.querySelectorAll("[data-select-item]");
@@ -97,7 +97,7 @@ window.onload = () => {
   }
 
   // filter variables
-  const filterItems = document.querySelectorAll("[data-filter-item]");
+  const filterItems = document.querySelectorAll("[data-project-item]");
 
   const filterFunc = (selectedValue) => {
     for (let i = 0; i < filterItems.length; i++) {
@@ -125,7 +125,7 @@ window.onload = () => {
   }
 
 
-
+  /* * ========== CONTACT FORM ========== * */
   /*// contact form variables
   const form = document.querySelector("[data-form]");
   const formInputs = document.querySelectorAll("[data-form-input]");
@@ -148,7 +148,7 @@ window.onload = () => {
   }*/
 
 
-
+  /* * ========== NAVBAR ========== * */
   // page navigation variables
   const navigationLinks = document.querySelectorAll("[data-nav-link]");
   const pages = document.querySelectorAll("[data-page]");
@@ -178,4 +178,46 @@ window.onload = () => {
   const loader = document.querySelector("[data-loader]");
     loader.style.display = "none";
 
+
+    /* * ========== PROJECTS MODAL ========== * */
+    /*
+  // project variables
+  const projectItem = document.querySelectorAll("[data-project-item]");
+  const modalProject = document.querySelector("[data-modal-project]");
+  const modalProjectClose = document.querySelector("[data-modal-project-close]");
+  const overlayProject = document.querySelector("[data-overlay-project]");
+
+  // modal variable
+  const modalProjectImg = document.querySelector("[data-modal-project-img]");
+  const modalProjectText = document.querySelector("[data-modal-project-text]");
+
+  // modal toggle function
+  const ProjectModalFunc = function () {
+
+    modalProject.classList.toggle("active");
+    overlayProject.classList.toggle("active");
+
+  }
+
+  // add click event to all modal items
+  for (let i = 0; i < projectItem.length; i++) {
+
+    projectItem[i].addEventListener("click", function () {
+
+      modalProjectImg.src = this.querySelector("[data-testimonials-avatar]").src;
+      modalProjectImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
+      modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+      modalDate.innerHTML = this.querySelector("[data-testimonials-date]").innerHTML;
+      modalProjectText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+
+      ProjectModalFunc();
+
+    });
+
+  }
+
+  // add click event to modal close button
+  modalProjectClose.addEventListener("click", ProjectModalFunc);
+  overlayProject.addEventListener("click", ProjectModalFunc);
+*/
 }

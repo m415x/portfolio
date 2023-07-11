@@ -21,7 +21,7 @@ fetch("../assets/data/projects.json")
 
       const listItem = document.createElement("li");
       listItem.classList.add("portfolio__project__item", "active");
-      listItem.setAttribute("data-filter-item", "");
+      listItem.setAttribute("data-project-item", "");
       listItem.setAttribute("data-category", project.category);
 
       const image = document.createElement("img");
@@ -32,7 +32,22 @@ fetch("../assets/data/projects.json")
       image.setAttribute("data-project-type", project.type);
       image.setAttribute("data-project-dimensions", project.dimensions);
       image.setAttribute("data-project-description", project.description);
-      image.setAttribute("loading", "lazy");
+      image.setAttribute("data-project-sold", project.sold);
+      image.setAttribute("data-project-awarded", project.awarded);
+
+      if(project.sold === true) {
+        const soldItem = document.createElement("span");
+        soldItem.classList.add("portfolio__project__item--sold");
+        listItem.appendChild(soldItem);
+        console.log(project.title, "sold")
+      }
+
+      if(project.awarded === true) {
+        const awardedItem = document.createElement("span");
+        awardedItem.classList.add("portfolio__project__item--awarded");
+        listItem.appendChild(awardedItem);
+        console.log(project.title, "awarded")
+      }
 
       listItem.appendChild(image);
       projectList.appendChild(listItem);
@@ -60,10 +75,21 @@ fetch("../assets/data/projects.json")
       filterSelect.appendChild(categoryItemSelect);
     });
 
+    // Call a function to apply lazy loading after the elements have been added to the DOM
+      applyLazyLoading();
+
   })
   .catch(error => {
     console.log("Error al cargar los proyectos:", error);
 });
+
+// Function to add loading lazy
+function applyLazyLoading() {
+  const images = document.querySelectorAll("[data-project-list] img");
+  images.forEach(image => {
+    image.setAttribute("loading", "lazy");
+  });
+}
 
 // Function to shuffle an array
 function shuffle(array) {
