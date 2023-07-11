@@ -10,17 +10,14 @@ fetch("../assets/data/projects.json")
 
     // Create a set to store unique categories
     const uniqueCategories = new Set();
-    // const area = new Array();
+
+    // Shuffle the projects array
+    const shuffledProjects = shuffle(data.projects);
 
     // Generate the HTML elements for each project
-    data.projects.forEach(project => {
+    shuffledProjects.forEach(project => {
       const categories = project.category.split(", ");
-      // console.log(categories)
       categories.forEach(category => uniqueCategories.add(category));
-
-      // const dimensions = project.dimensions.split(", ");
-      // console.log(dimensions)
-      // dimensions.forEach(dimension => area.add(dimension));
 
       const listItem = document.createElement("li");
       listItem.classList.add("portfolio__project__item", "active");
@@ -41,8 +38,11 @@ fetch("../assets/data/projects.json")
       projectList.appendChild(listItem);
     });
 
-    // Create category options based on the unique categories in the set
-    uniqueCategories.forEach(category => {
+    // Convert uniqueCategories set to an array and sort alphabetically
+    const sortedCategories = Array.from(uniqueCategories).sort();
+
+    // Generate the HTML elements for category buttons
+    sortedCategories.forEach(category => {
       const categoryItemList = document.createElement("li");
       categoryItemList.classList.add("portfolio__filter-list__item");
       const categoryBtnList = document.createElement("button");
@@ -63,4 +63,21 @@ fetch("../assets/data/projects.json")
   })
   .catch(error => {
     console.log("Error al cargar los proyectos:", error);
-  });
+});
+
+// Function to shuffle an array
+function shuffle(array) {
+  let currentIndex = array.length;
+  let temporaryValue, randomIndex;
+
+  while (currentIndex !== 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
