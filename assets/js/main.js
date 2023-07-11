@@ -179,8 +179,7 @@ window.onload = () => {
     loader.style.display = "none";
 
 
-    /* * ========== PROJECTS MODAL ========== * */
-    /*
+  /* * ========== PROJECTS MODAL ========== * */
   // project variables
   const projectItem = document.querySelectorAll("[data-project-item]");
   const modalProject = document.querySelector("[data-modal-project]");
@@ -204,11 +203,11 @@ window.onload = () => {
 
     projectItem[i].addEventListener("click", function () {
 
-      modalProjectImg.src = this.querySelector("[data-testimonials-avatar]").src;
-      modalProjectImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-      modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-      modalDate.innerHTML = this.querySelector("[data-testimonials-date]").innerHTML;
-      modalProjectText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+      const modalProjectData = this.querySelector("[data-project-item] img")
+
+      modalProjectImg.src = modalProjectData.src;
+      modalProjectImg.alt = modalProjectData.alt;
+      // modalProjectText.innerHTML = `${modalProjectData.dataset.title} ${modalProjectData.dataset.} ${modalProjectData.dataset.} ${modalProjectData.dataset.} ${modalProjectData.dataset.}`;
 
       ProjectModalFunc();
 
@@ -219,5 +218,5 @@ window.onload = () => {
   // add click event to modal close button
   modalProjectClose.addEventListener("click", ProjectModalFunc);
   overlayProject.addEventListener("click", ProjectModalFunc);
-*/
+
 }

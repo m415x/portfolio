@@ -1,0 +1,23 @@
+.project__modal__frame__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--onyx);
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-2);
+    font-size: 18px;
+    opacity: 0.7;
+  }
+  
+  .project__modal__frame__close:is(:hover, :focus) {
+    opacity: 1;
+  }
+  
+  .project__modal__frame__close ion-icon {
+    --ionicon-stroke-width: 50px;
+  }
