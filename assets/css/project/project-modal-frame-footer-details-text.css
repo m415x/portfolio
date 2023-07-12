@@ -1,0 +1,15 @@
+.project__modal__frame__footer__details__text {
+  width: 85%;
+  float: left;
+  text-align: left;
+  padding-top: 2px;
+  line-height: 1.6em;
+}
+
+.project__modal__frame__footer__details__text span {
+  display: inline;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.1em;
+}

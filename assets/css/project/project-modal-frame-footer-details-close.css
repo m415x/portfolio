@@ -1,7 +1,7 @@
-.project__modal__frame__close {
+.project__modal__frame__footer__details__close {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 40px;
+    right: 40px;
     background: var(--onyx);
     border-radius: 8px;
     width: 32px;
@@ -14,10 +14,10 @@
     opacity: 0.7;
   }
   
-  .project__modal__frame__close:is(:hover, :focus) {
+  .project__modal__frame__footer__details__close:is(:hover, :focus) {
     opacity: 1;
   }
   
-  .project__modal__frame__close ion-icon {
+  .project__modal__frame__footer__details__close ion-icon {
     --ionicon-stroke-width: 50px;
   }

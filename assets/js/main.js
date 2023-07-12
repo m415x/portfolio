@@ -32,6 +32,60 @@ window.onload = () => {
   });
 
 
+  /* * ========== PROJECTS MODAL ========== * */
+  // project variables
+  const projectItem = document.querySelectorAll("[data-project-item]");
+  const modalProject = document.querySelector("[data-modal-project]");
+  const modalProjectClose = document.querySelector("[data-modal-project-close]");
+  const overlayProject = document.querySelector("[data-overlay-project]");
+
+  // modal variable
+  const modalProjectImg = document.querySelector("[data-modal-project-img]");
+  const modalProjectText = document.querySelector("[data-modal-project-text]");
+
+  // modal toggle function
+  const ProjectModalFunc = function () {
+
+    modalProject.classList.toggle("active");
+    overlayProject.classList.toggle("active");
+
+  }
+
+  // add click event to all modal items
+  for (let i = 0; i < projectItem.length; i++) {
+
+    projectItem[i].addEventListener("click", function () {
+
+      const modalProjectData = this.querySelector("[data-project-item] img")
+      const dimensions = modalProjectData.dataset.projectDimensions.split(", ");
+      const dimensionsText = `${dimensions[0]}x${dimensions[1]}cm`;
+
+      modalProjectImg.src = modalProjectData.src;
+      modalProjectImg.alt = modalProjectData.alt;
+      modalProjectText.innerHTML = `
+        <span>&laquo; ${modalProjectData.dataset.projectTitle} &raquo; <strong>&middot;</strong>
+        ${modalProjectData.dataset.projectDate}</span><br>
+        <span>${modalProjectData.dataset.projectType}
+        ${dimensionsText}</span><br>
+        <span>${modalProjectData.dataset.projectDescription}</span>
+      `;
+
+      ProjectModalFunc();
+
+    });
+
+  }
+
+  // add click event to modal close button
+  modalProjectClose.addEventListener("click", ProjectModalFunc);
+  overlayProject.addEventListener("click", ProjectModalFunc);
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+      ProjectModalFunc();
+    }
+  });
+
+
   /* * ========== TESTIMONIALS ========== * */
   // testimonials variables
   const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
@@ -73,6 +127,11 @@ window.onload = () => {
   // add click event to modal close button
   modalCloseBtn.addEventListener("click", testimonialsModalFunc);
   overlay.addEventListener("click", testimonialsModalFunc);
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+      testimonialsModalFunc();
+    }
+  });
 
 
   /* * ========== FILTERS ========== * */
@@ -176,47 +235,6 @@ window.onload = () => {
   }
 
   const loader = document.querySelector("[data-loader]");
-    loader.style.display = "none";
-
-
-  /* * ========== PROJECTS MODAL ========== * */
-  // project variables
-  const projectItem = document.querySelectorAll("[data-project-item]");
-  const modalProject = document.querySelector("[data-modal-project]");
-  const modalProjectClose = document.querySelector("[data-modal-project-close]");
-  const overlayProject = document.querySelector("[data-overlay-project]");
-
-  // modal variable
-  const modalProjectImg = document.querySelector("[data-modal-project-img]");
-  const modalProjectText = document.querySelector("[data-modal-project-text]");
-
-  // modal toggle function
-  const ProjectModalFunc = function () {
-
-    modalProject.classList.toggle("active");
-    overlayProject.classList.toggle("active");
-
-  }
-
-  // add click event to all modal items
-  for (let i = 0; i < projectItem.length; i++) {
-
-    projectItem[i].addEventListener("click", function () {
-
-      const modalProjectData = this.querySelector("[data-project-item] img")
-
-      modalProjectImg.src = modalProjectData.src;
-      modalProjectImg.alt = modalProjectData.alt;
-      // modalProjectText.innerHTML = `${modalProjectData.dataset.title} ${modalProjectData.dataset.} ${modalProjectData.dataset.} ${modalProjectData.dataset.} ${modalProjectData.dataset.}`;
-
-      ProjectModalFunc();
-
-    });
-
-  }
-
-  // add click event to modal close button
-  modalProjectClose.addEventListener("click", ProjectModalFunc);
-  overlayProject.addEventListener("click", ProjectModalFunc);
+    loader.style.display = "none"
 
 }
