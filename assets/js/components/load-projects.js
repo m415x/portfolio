@@ -17,12 +17,20 @@ fetch("../assets/data/projects.json")
     // Generate the HTML elements for each project
     shuffledProjects.forEach(project => {
       const categories = project.category.split(", ");
+
+      if(project.onSale === true) {
+        categories.push("en venta");
+      }
+      if(project.awarded === true) {
+        categories.push("premiadas");
+      }
+
       categories.forEach(category => uniqueCategories.add(category));
 
       const listItem = document.createElement("li");
       listItem.classList.add("portfolio__project__item", "active");
       listItem.setAttribute("data-project-item", "");
-      listItem.setAttribute("data-category", project.category);
+      listItem.setAttribute("data-category", categories.join(", "));
 
       const image = document.createElement("img");
       image.src = project.image;
@@ -32,21 +40,19 @@ fetch("../assets/data/projects.json")
       image.setAttribute("data-project-type", project.type);
       image.setAttribute("data-project-dimensions", project.dimensions);
       image.setAttribute("data-project-description", project.description);
-      image.setAttribute("data-project-sold", project.sold);
+      image.setAttribute("data-project-on-sale", project.onSale);
       image.setAttribute("data-project-awarded", project.awarded);
 
-      if(project.sold === true) {
-        const soldItem = document.createElement("span");
-        soldItem.classList.add("portfolio__project__item--sold");
-        listItem.appendChild(soldItem);
-        console.log(project.title, "sold")
+      if(project.onSale === true) {
+        const onSaleItem = document.createElement("span");
+        onSaleItem.classList.add("portfolio__project__item--on-sale");
+        listItem.appendChild(onSaleItem);
       }
 
       if(project.awarded === true) {
         const awardedItem = document.createElement("span");
         awardedItem.classList.add("portfolio__project__item--awarded");
         listItem.appendChild(awardedItem);
-        console.log(project.title, "awarded")
       }
 
       listItem.appendChild(image);
@@ -55,6 +61,20 @@ fetch("../assets/data/projects.json")
 
     // Convert uniqueCategories set to an array and sort alphabetically
     const sortedCategories = Array.from(uniqueCategories).sort();
+
+    // Move the category "en venta" to position 0
+    const indexEnVenta = sortedCategories.indexOf("en venta");
+    if (indexEnVenta > -1) {
+      sortedCategories.splice(indexEnVenta, 1);
+      sortedCategories.unshift("en venta");
+    }
+
+    // Move the category "premiadas" to position 1
+    const indexPremiadas = sortedCategories.indexOf("premiadas");
+    if (indexPremiadas > -1) {
+      sortedCategories.splice(indexPremiadas, 1);
+      sortedCategories.splice(1, 0, "premiadas");
+    }
 
     // Generate the HTML elements for category buttons
     sortedCategories.forEach(category => {
