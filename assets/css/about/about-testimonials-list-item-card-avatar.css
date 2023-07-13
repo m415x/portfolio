@@ -10,6 +10,7 @@
 
 .about__testimonials__list__item__card__avatar img {
   width: 60px;
+  border-radius: 14px;
 }
 
 

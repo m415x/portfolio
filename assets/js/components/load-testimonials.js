@@ -28,22 +28,34 @@ fetch("../assets/data/testimonials.json")
       h4.setAttribute("data-testimonials-title", "");
       h4.textContent = testimonial.name;
 
-      const time = document.createElement("time");
-      time.setAttribute("datetime", testimonial.date);
-      time.style.display = "none";
-      time.setAttribute("data-testimonials-date", "");
-      time.textContent = testimonial.date;
+      // const time = document.createElement("time");
+      // time.setAttribute("datetime", testimonial.date);
+      // time.style.display = "none";
+      // time.setAttribute("data-testimonials-date", "");
+      // time.textContent = testimonial.date;
+
+      const profession = document.createElement("h6");
+      profession.style.display = "none";
+      profession.setAttribute("data-testimonials-profession", "");
+      profession.textContent = testimonial.profession;
 
       const divText = document.createElement("div");
       divText.classList.add("about__testimonials__list__item__card__text");
       divText.setAttribute("data-testimonials-text", "");
-      const p = document.createElement("p");
-      p.textContent = testimonial.text;
-      divText.appendChild(p);
+      // const p = document.createElement("p");
+      // p.textContent = testimonial.text;
+      testimonial.text.forEach(paragraph => {
+        const p = document.createElement("p");
+        p.textContent = paragraph;
+        divText.appendChild(p);
+      });
+
+
 
       div.appendChild(figure);
       div.appendChild(h4);
-      div.appendChild(time);
+      // div.appendChild(time);
+      div.appendChild(profession);
       div.appendChild(divText);
 
       li.appendChild(div);

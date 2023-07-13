@@ -9,7 +9,7 @@ fetch("../assets/data/projects.json")
   .then(data => {
 
     // Create a set to store unique categories
-    const uniqueCategories = new Set();
+    const uniqueCategories = new Set(); // dibujo, pintura, técnicas mixtas, escultura, grabado
 
     // Shuffle the projects array
     const shuffledProjects = shuffle(data.projects);
@@ -37,9 +37,9 @@ fetch("../assets/data/projects.json")
       image.alt = project.title;
       image.setAttribute("data-project-title", project.title);
       image.setAttribute("data-project-date", project.date);
-      image.setAttribute("data-project-type", project.type);
+      image.setAttribute("data-project-technique", project.technique);
       image.setAttribute("data-project-dimensions", project.dimensions);
-      image.setAttribute("data-project-description", project.description);
+      // image.setAttribute("data-project-description", project.description);
       image.setAttribute("data-project-on-sale", project.onSale);
       image.setAttribute("data-project-awarded", project.awarded);
 
