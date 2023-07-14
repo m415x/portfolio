@@ -10,6 +10,10 @@
   display: none;
 }
 
+.about__modal__testimonials__img figure img {
+  border-radius: 14px;
+}
+
 
 /*----------------------------------------*\
   RESPONSIVE LARGER THAN 580 PX SCREEN
@@ -30,6 +34,7 @@
 
   .about__modal__testimonials__img figure img {
     width: 65px;
+    border-radius: 18px;
   }
 
   .about__modal__testimonials__img > img {
