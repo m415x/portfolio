@@ -14,6 +14,42 @@
   overflow-y: auto; /* Mostrar barra de desplazamiento solo cuando sea necesario */
 }
 
+.about__modal__testimonials::-webkit-scrollbar {
+  width: 20px;
+}
+
+.about__modal__testimonials::-webkit-scrollbar-track {
+  background: var(--smoky-black);
+  border-radius: 10px;
+
+}
+
+.about__modal__testimonials::-webkit-scrollbar-track-piece {
+  background: var(--smoky-black);
+  border-radius: 10px;
+}
+
+.about__modal__testimonials::-webkit-scrollbar-thumb {
+  border: 5px solid var(--smoky-black);
+  background: hsla(0, 0%, 100%, 0.1);
+  border-radius: 20px;
+  box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+    inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+}
+
+.about__modal__testimonials::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 100%, 0.15);
+}
+
+.about__modal__testimonials::-webkit-scrollbar-button {
+  height: 40px;
+}
+
+.about__modal__testimonials::-webkit-scrollbar-corner {
+  background: var(--smoky-black);
+  border-radius: 20px;
+}
+
 .about__modal.active .about__modal__testimonials {
   transform: scale(1);
   opacity: 1;

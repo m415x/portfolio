@@ -42,8 +42,6 @@ fetch("../assets/data/testimonials.json")
       const divText = document.createElement("div");
       divText.classList.add("about__testimonials__list__item__card__text");
       divText.setAttribute("data-testimonials-text", "");
-      // const p = document.createElement("p");
-      // p.textContent = testimonial.text;
       testimonial.text.forEach(paragraph => {
         const p = document.createElement("p");
         p.textContent = paragraph;
