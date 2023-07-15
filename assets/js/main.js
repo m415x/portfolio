@@ -56,7 +56,7 @@ window.onload = () => {
 
     projectItem[i].addEventListener("click", function () {
 
-      const modalProjectData = this.querySelector("[data-project-item] img")
+      const modalProjectData = this.querySelector("[data-project-item] img");
       const dimensions = modalProjectData.dataset.projectDimensions.split(", ");
       const dimensionsText = `${dimensions[0]}x${dimensions[1]}cm`;
 
@@ -65,7 +65,7 @@ window.onload = () => {
       modalProjectText.innerHTML = `
         <span>&laquo; ${modalProjectData.dataset.projectTitle} &raquo; <strong>&middot;</strong>
         ${modalProjectData.dataset.projectDate}</span><br>
-        <span>${modalProjectData.dataset.projectType}
+        <span>${modalProjectData.dataset.projectTechnique}
         ${dimensionsText}</span>
       `;
 
@@ -235,7 +235,10 @@ window.onload = () => {
 
   }
 
+  // Hide loader after 5 seconds
   const loader = document.querySelector("[data-loader]");
-    loader.style.display = "none"
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 2000);
 
 }

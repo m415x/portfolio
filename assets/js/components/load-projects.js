@@ -3,16 +3,27 @@ const projectList = document.querySelector("[data-project-list]");
 const filterList = document.querySelector("[data-filter-list]");
 const filterSelect = document.querySelector("[data-filter-select]");
 
-// Load JSON data
-fetch("../assets/data/projects.json")
-  .then(response => response.json())
-  .then(data => {
+
+// Load XLSX data
+fetch("../assets/data/projects.xlsx")
+  .then(response => response.arrayBuffer())
+  .then(arrayBuffer => {
+    // Parse the XLSX data
+    const workbook = XLSX.read(arrayBuffer, { type: "array" });
+    const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+    const jsonData = XLSX.utils.sheet_to_json(worksheet);
+
+// // Load JSON data
+// fetch("../assets/data/projects.json")
+//   .then(response => response.json())
+//   .then(data => {
 
     // Create a set to store unique categories
-    const uniqueCategories = new Set(); // dibujo, pintura, técnicas mixtas, escultura, grabado
+    const uniqueCategories = new Set(); // dibujo, pintura, técnicas mixtas, escultura, grabado, retrato
 
     // Shuffle the projects array
-    const shuffledProjects = shuffle(data.projects);
+    const shuffledProjects = shuffle(jsonData);
+    // const shuffledProjects = shuffle(data.projects);
 
     // Generate the HTML elements for each project
     shuffledProjects.forEach(project => {
@@ -33,7 +44,7 @@ fetch("../assets/data/projects.json")
       listItem.setAttribute("data-category", categories.join(", "));
 
       const image = document.createElement("img");
-      image.src = project.image;
+      image.src = `./media/${project.image}`;
       image.alt = project.title;
       image.setAttribute("data-project-title", project.title);
       image.setAttribute("data-project-date", project.date);
