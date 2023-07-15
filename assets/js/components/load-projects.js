@@ -46,6 +46,7 @@ fetch("../assets/data/projects.xlsx")
       const image = document.createElement("img");
       image.src = `./media/${project.image}`;
       image.alt = project.title;
+      image.classList.add("portfolio__project__item__img");
       image.setAttribute("data-project-title", project.title);
       image.setAttribute("data-project-date", project.date);
       image.setAttribute("data-project-technique", project.technique);
@@ -54,17 +55,17 @@ fetch("../assets/data/projects.xlsx")
       image.setAttribute("data-project-on-sale", project.onSale);
       image.setAttribute("data-project-awarded", project.awarded);
 
-      if(project.onSale === true) {
-        const onSaleItem = document.createElement("span");
-        onSaleItem.classList.add("portfolio__project__item--on-sale");
-        listItem.appendChild(onSaleItem);
-      }
+      // if(project.onSale === true) {
+      //   const onSaleItem = document.createElement("span");
+      //   onSaleItem.classList.add("portfolio__project__item__img--on-sale");
+      //   listItem.appendChild(onSaleItem);
+      // }
 
-      if(project.awarded === true) {
-        const awardedItem = document.createElement("span");
-        awardedItem.classList.add("portfolio__project__item--awarded");
-        listItem.appendChild(awardedItem);
-      }
+      // if(project.awarded === true) {
+      //   const awardedItem = document.createElement("span");
+      //   awardedItem.classList.add("portfolio__project__item__img--awarded");
+      //   listItem.appendChild(awardedItem);
+      // }
 
       listItem.appendChild(image);
       projectList.appendChild(listItem);
