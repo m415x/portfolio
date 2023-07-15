@@ -57,15 +57,21 @@ window.onload = () => {
     projectItem[i].addEventListener("click", function () {
 
       const modalProjectData = this.querySelector("[data-project-item] img");
-      const dimensions = modalProjectData.dataset.projectDimensions.split(", ");
-      const dimensionsText = `${dimensions[0]}x${dimensions[1]}cm`;
+      const dimensions = modalProjectData.dataset.projectDimensions;
+      let dimensionsText = "";
+
+      if(modalProjectData.dataset.projectDimensions.toLowerCase() === "pequeño formato") {
+        dimensionsText = "Pequeño formato";
+      } else {
+        dimensionsText = `${dimensions.split(", ")[0]}x${dimensions.split(", ")[1]}cm`;
+      }
 
       modalProjectImg.src = modalProjectData.src;
       modalProjectImg.alt = modalProjectData.alt;
       modalProjectText.innerHTML = `
         <span>&laquo; ${modalProjectData.dataset.projectTitle} &raquo; <strong>&middot;</strong>
         ${modalProjectData.dataset.projectDate}</span><br>
-        <span>${modalProjectData.dataset.projectTechnique}
+        <span>${modalProjectData.dataset.projectTechnique} <strong>&middot;</strong>
         ${dimensionsText}</span>
       `;
 
