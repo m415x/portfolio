@@ -33,7 +33,7 @@ window.onload = () => {
 
 
   /* * ========== PROJECTS MODAL ========== * */
-  // project variables
+  /*// project variables
   const projectItem = document.querySelectorAll("[data-project-item]");
   const modalProject = document.querySelector("[data-modal-project]");
   const modalProjectClose = document.querySelector("[data-modal-project-close]");
@@ -86,9 +86,10 @@ window.onload = () => {
   overlayProject.addEventListener("click", ProjectModalFunc);
   document.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
-      ProjectModalFunc();
+      modalProject.classList.remove("active");
+      overlayProject.classList.remove("active");
     }
-  });
+  });*/
 
 
   /* * ========== TESTIMONIALS ========== * */
@@ -136,7 +137,8 @@ window.onload = () => {
   overlay.addEventListener("click", testimonialsModalFunc);
   document.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
-      testimonialsModalFunc();
+      modalContainer.classList.remove("active");
+      overlay.classList.remove("active");
     }
   });
 
@@ -246,5 +248,8 @@ window.onload = () => {
   setTimeout(() => {
     loader.style.display = "none";
   }, 2000);
+  
+  // Load fullscreen lightbox
+  fslightbox();
 
 }

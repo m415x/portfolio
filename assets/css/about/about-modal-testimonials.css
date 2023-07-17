@@ -10,8 +10,8 @@
   opacity: 0;
   transition: var(--transition-1);
   z-index: 2;
-  max-height: 90%; /* Altura máxima para mostrar la barra de desplazamiento */
-  overflow-y: auto; /* Mostrar barra de desplazamiento solo cuando sea necesario */
+  max-height: 90%;
+  overflow-y: auto;
 }
 
 .about__modal__testimonials::-webkit-scrollbar {

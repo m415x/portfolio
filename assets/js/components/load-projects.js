@@ -43,8 +43,16 @@ fetch("../assets/data/projects.xlsx")
       listItem.setAttribute("data-project-item", "");
       listItem.setAttribute("data-category", categories.join(", "));
 
+      const aItem = document.createElement("a");
+      aItem.href = `./media/${project.category}/${project.image}`;
+      if (project.series == "false") {
+        aItem.setAttribute("data-fslightbox", "projects-images");
+      } else {
+        aItem.setAttribute("data-fslightbox", project.title);
+      }
+
       const image = document.createElement("img");
-      image.src = `./media/${project.image}`;
+      image.src = `./media/${project.category}/${project.image}`;
       image.alt = project.title;
       image.classList.add("portfolio__project__item__img");
       image.setAttribute("data-project-title", project.title);
@@ -52,8 +60,14 @@ fetch("../assets/data/projects.xlsx")
       image.setAttribute("data-project-technique", project.technique);
       image.setAttribute("data-project-dimensions", project.dimensions);
       // image.setAttribute("data-project-description", project.description);
+      image.setAttribute("data-project-series", project.series);
       image.setAttribute("data-project-on-sale", project.onSale);
       image.setAttribute("data-project-awarded", project.awarded);
+      // if (project.series == "false") {
+      //   image.setAttribute("data-fslightbox", "projects-images");
+      // } else {
+      //   image.setAttribute("data-fslightbox", project.title);
+      // }
 
       // if(project.onSale === true) {
       //   const onSaleItem = document.createElement("span");
@@ -67,7 +81,8 @@ fetch("../assets/data/projects.xlsx")
       //   listItem.appendChild(awardedItem);
       // }
 
-      listItem.appendChild(image);
+      aItem.appendChild(image);
+      listItem.appendChild(aItem);
       projectList.appendChild(listItem);
     });
 
@@ -108,7 +123,7 @@ fetch("../assets/data/projects.xlsx")
     });
 
     // Call a function to apply lazy loading after the elements have been added to the DOM
-      applyLazyLoading();
+      // applyLazyLoading();
 
   })
   .catch(error => {
@@ -116,12 +131,12 @@ fetch("../assets/data/projects.xlsx")
 });
 
 // Function to add loading lazy
-function applyLazyLoading() {
+/*function applyLazyLoading() {
   const images = document.querySelectorAll("[data-project-list] img");
   images.forEach(image => {
     image.setAttribute("loading", "lazy");
   });
-}
+}*/
 
 // Function to shuffle an array
 function shuffle(array) {

@@ -34,3 +34,7 @@
   font-weight: var(--fw-600);
   line-height: 1.6;
 }
+
+.about__modal__testimonials__content div p:last-child {
+  padding-bottom: 15px;
+}
