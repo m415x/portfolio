@@ -249,7 +249,4 @@ window.onload = () => {
     loader.style.display = "none";
   }, 2000);
   
-  // Load fullscreen lightbox
-  fslightbox();
-
 }
