@@ -13,26 +13,20 @@ fetch("../assets/data/projects.xlsx")
     const worksheet = workbook.Sheets[workbook.SheetNames[0]];
     const jsonData = XLSX.utils.sheet_to_json(worksheet);
 
-// // Load JSON data
-// fetch("../assets/data/projects.json")
-//   .then(response => response.json())
-//   .then(data => {
-
     // Create a set to store unique categories
     const uniqueCategories = new Set(); // dibujo, pintura, técnicas mixtas, escultura, grabado, retrato
 
     // Shuffle the projects array
     const shuffledProjects = shuffle(jsonData);
-    // const shuffledProjects = shuffle(data.projects);
 
     // Generate the HTML elements for each project
     shuffledProjects.forEach(project => {
       const categories = project.category.split(", ");
 
-      if(project.onSale === true) {
+      if(project.onSale === "true") {
         categories.push("en venta");
       }
-      if(project.awarded === true) {
+      if(project.awarded === "true") {
         categories.push("premiadas");
       }
 
@@ -43,13 +37,20 @@ fetch("../assets/data/projects.xlsx")
       listItem.setAttribute("data-project-item", "");
       listItem.setAttribute("data-category", categories.join(", "));
 
+      const img = new Image();
+      img.src = `./media/${project.category}/${project.image}`;
+      const imgWidth = img.naturalWidth;
+      const imgHeight = img.naturalHeight;
       const aItem = document.createElement("a");
       aItem.href = `./media/${project.category}/${project.image}`;
-      if (project.series == "false") {
-        aItem.setAttribute("data-fslightbox", "projects-images");
-      } else {
-        aItem.setAttribute("data-fslightbox", project.title);
-      }
+      aItem.setAttribute("data-pswp-width", imgWidth);
+      aItem.setAttribute("data-pswp-height", imgHeight);
+      aItem.setAttribute("target", "_blank");
+      // if (project.series == "false") {
+      //   aItem.setAttribute("data-fslightbox", "projects-images");
+      // } else {
+      //   aItem.setAttribute("data-fslightbox", project.title);
+      // }
 
       const image = document.createElement("img");
       image.src = `./media/${project.category}/${project.image}`;
@@ -59,15 +60,9 @@ fetch("../assets/data/projects.xlsx")
       image.setAttribute("data-project-date", project.date);
       image.setAttribute("data-project-technique", project.technique);
       image.setAttribute("data-project-dimensions", project.dimensions);
-      // image.setAttribute("data-project-description", project.description);
       image.setAttribute("data-project-series", project.series);
       image.setAttribute("data-project-on-sale", project.onSale);
       image.setAttribute("data-project-awarded", project.awarded);
-      // if (project.series == "false") {
-      //   image.setAttribute("data-fslightbox", "projects-images");
-      // } else {
-      //   image.setAttribute("data-fslightbox", project.title);
-      // }
 
       // if(project.onSale === true) {
       //   const onSaleItem = document.createElement("span");
@@ -130,6 +125,7 @@ fetch("../assets/data/projects.xlsx")
     console.log("Error al cargar los proyectos:", error);
 });
 
+
 // Function to add loading lazy
 /*function applyLazyLoading() {
   const images = document.querySelectorAll("[data-project-list] img");
@@ -137,6 +133,7 @@ fetch("../assets/data/projects.xlsx")
     image.setAttribute("loading", "lazy");
   });
 }*/
+
 
 // Function to shuffle an array
 function shuffle(array) {
