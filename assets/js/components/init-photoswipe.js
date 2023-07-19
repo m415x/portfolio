@@ -24,6 +24,10 @@ const options = {
   // Used for slide count indicator
   indexIndicatorSep: ' de ',
 
+  // Disable vertical drag on mobile devices
+  allowVerticalDrag: false,
+
+  // Scales the image to fit completely within the PhotoSwipe viewer without distorting it
   scaleMode: 'fit'
 };
 
