@@ -11,7 +11,10 @@ const lightbox = new PhotoSwipeLightbox({
   children: 'a',
 
   // setup PhotoSwipe Core dynamic import
-  pswpModule: () => import('../../vendor/photoswipe/dist/photoswipe.esm.js')
+  pswpModule: () => import('../../vendor/photoswipe/dist/photoswipe.esm.js'),
+
+  // Modifica este valor para ajustar el tamaño de la imagen dentro del visor
+  fitRatio: 0.95, 
 });
 
 lightbox.init();
