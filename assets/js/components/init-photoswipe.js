@@ -13,7 +13,16 @@ const options = {
   pswpModule: () => import('../../vendor/photoswipe/dist/photoswipe.esm.js'),
 
   // Modify this value to adjust the size of the image within the viewer
-  fitRatio: 0.85
+  fitRatio: 0.95,
+
+  // Background backdrop opacity
+  bgOpacity: 0.8,
+
+  // Slide area padding
+  padding: { top: 20, bottom: 70, left: 20, right: 20 },
+
+  // Used for slide count indicator
+  indexIndicatorSep: ' de '
 };
 
 const lightbox = new PhotoSwipeLightbox(options);
