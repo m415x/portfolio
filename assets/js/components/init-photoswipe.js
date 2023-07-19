@@ -22,7 +22,9 @@ const options = {
   padding: { top: 20, bottom: 70, left: 20, right: 20 },
 
   // Used for slide count indicator
-  indexIndicatorSep: ' de '
+  indexIndicatorSep: ' de ',
+
+  scaleMode: 'fit'
 };
 
 const lightbox = new PhotoSwipeLightbox(options);
