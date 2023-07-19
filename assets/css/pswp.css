@@ -1,0 +1,26 @@
+.pswp__custom-caption {
+  background: var(--onyx-70);
+  font-size: var(--fs-6);
+  color: var(--light-gray);
+  width: calc(100% - 32px);
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 14px;
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+}
+
+.pswp__custom-caption p:last-child {
+  font-size: var(--fs-8);
+}
+
+.pswp__custom-caption a {
+  color: var(--light-gray);
+  text-decoration: underline;
+}
+
+.hidden-caption-content {
+  display: none;
+}

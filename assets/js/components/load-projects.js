@@ -37,20 +37,22 @@ fetch("../assets/data/projects.xlsx")
       listItem.setAttribute("data-project-item", "");
       listItem.setAttribute("data-category", categories.join(", "));
 
+      const aItem = document.createElement("a");
       const img = new Image();
       img.src = `./media/${project.category}/${project.image}`;
       const imgWidth = img.naturalWidth;
       const imgHeight = img.naturalHeight;
-      const aItem = document.createElement("a");
       aItem.href = `./media/${project.category}/${project.image}`;
+      aItem.setAttribute("data-project-title", project.title);
+      aItem.setAttribute("data-project-date", project.date);
+      aItem.setAttribute("data-project-technique", project.technique);
+      aItem.setAttribute("data-project-dimensions", project.dimensions);
+      aItem.setAttribute("data-project-series", project.series);
+      aItem.setAttribute("data-project-on-sale", project.onSale);
+      aItem.setAttribute("data-project-awarded", project.awarded);
       aItem.setAttribute("data-pswp-width", imgWidth);
       aItem.setAttribute("data-pswp-height", imgHeight);
       aItem.setAttribute("target", "_blank");
-      // if (project.series == "false") {
-      //   aItem.setAttribute("data-fslightbox", "projects-images");
-      // } else {
-      //   aItem.setAttribute("data-fslightbox", project.title);
-      // }
 
       const image = document.createElement("img");
       image.src = `./media/${project.category}/${project.image}`;
@@ -151,49 +153,3 @@ function shuffle(array) {
 
   return array;
 }
-
-
-/*
-<div class="pswp-gallery pswp-gallery--single-column" id="gallery--getting-started">
-  <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" 
-    data-pswp-width="1669" 
-    data-pswp-height="2500" 
-    target="_blank">
-    <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="" />
-  </a>
-  <!-- cropped thumbnail: -->
-  <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg" 
-    data-pswp-width="1875" 
-    data-pswp-height="2500" 
-    data-cropped="true" 
-    target="_blank">
-    <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg" alt="" />
-    Cropped
-  </a>
-  <!-- data-pswp-src with custom URL in href -->
-  <a href="https://unsplash.com" 
-    data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
-    data-pswp-width="2500" 
-    data-pswp-height="1666" 
-    target="_blank">
-    <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="" />
-  </a>
-  <!-- Without thumbnail: -->
-  <a href="http://example.com" 
-    data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg"
-    data-pswp-width="2500" 
-    data-pswp-height="1668" 
-    target="_blank">
-    No thumbnail
-  </a>
-  <!-- wrapped with any element: -->
-  <div>
-    <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg"
-      data-pswp-width="2500" 
-      data-pswp-height="1667" 
-      target="_blank">
-      <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg" alt="" />
-    </a>
-  </div>
-</div>
-*/
