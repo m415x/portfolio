@@ -66,17 +66,21 @@ fetch("../assets/data/projects.xlsx")
       image.setAttribute("data-project-on-sale", project.onSale);
       image.setAttribute("data-project-awarded", project.awarded);
 
-      // if(project.onSale === true) {
-      //   const onSaleItem = document.createElement("span");
-      //   onSaleItem.classList.add("portfolio__project__item__img--on-sale");
-      //   listItem.appendChild(onSaleItem);
-      // }
+      if(project.onSale === "false") {
+        const soldItem = document.createElement("div");
+        soldItem.classList.add("portfolio__project__item--sold");
+        const spanItem = document.createElement("span");
+        spanItem.textContent = "Vendida";
+        soldItem.appendChild(spanItem);
+        listItem.appendChild(soldItem);
+      }
 
-      // if(project.awarded === true) {
-      //   const awardedItem = document.createElement("span");
-      //   awardedItem.classList.add("portfolio__project__item__img--awarded");
-      //   listItem.appendChild(awardedItem);
-      // }
+      if(project.awarded !== "false") {
+        const awardedItem = document.createElement("div");
+        awardedItem.classList.add("portfolio__project__item--awarded");
+        awardedItem.textContent = "Premiada";
+        listItem.appendChild(awardedItem);
+      }
 
       aItem.appendChild(image);
       listItem.appendChild(aItem);

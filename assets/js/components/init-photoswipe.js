@@ -51,19 +51,32 @@ lightbox.on('uiRegister', function() {
           const date = currSlideElement.dataset.projectDate || '';
           const technique = currSlideElement.dataset.projectTechnique || '';
           let dimensions = currSlideElement.dataset.projectDimensions || '';
-          if(dimensions != "pequeño formato") {
-            dimensions = `${dimensions.split(", ")[0]}x${dimensions.split(", ")[1]}cm`
+          if(dimensions == "pequeño formato") {
+            dimensions = "Pequeño formato";
+          } else if (dimensions == "gran formato") {
+            dimensions = "Gran formato";
+          } else if (dimensions == "undefined") {
+            dimensions = "undefined";
           } else {
-            dimensions = "Pequeño formato"
+            dimensions = `${dimensions.split(", ")[0]}x${dimensions.split(", ")[1]}cm`;
           }
 
           // Create the custom caption HTML
-          captionHTML = `
-            <div class="custom-caption">
-              <p>« ${title} » · ${date}</p>
-              <p>${technique} · ${dimensions}</p>
-            </div>
-          `;
+          if(dimensions != "undefined") {
+            captionHTML = `
+              <div class="custom-caption">
+                <p>« ${title} » · ${date}</p>
+                <p>${technique} · ${dimensions}</p>
+              </div>
+            `;
+          } else {
+            captionHTML = `
+              <div class="custom-caption">
+                <p>« ${title} » · ${date}</p>
+                <p>${technique}</p>
+              </div>
+            `;
+          }
         }
         el.innerHTML = captionHTML || '';
       });

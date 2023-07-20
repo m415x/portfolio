@@ -118,7 +118,6 @@
 
   /* SOLID */
   --jet: #383838;
-  /* --onyx: #2b2b2c; */
   --onyx: #35393c;
   --onyx-70: #35393bb3;
   --eerie-black-1: #202022;
@@ -128,11 +127,10 @@
   --white-2: #fafafa;
   --orange-yellow-crayola: #ffdb70;
   --vegas-gold: #ceb15a;
-  /* --light-gray: #d6d6d6;
-  --light-gray-70: #d6d6d6b3; */
   --light-gray: #e3dac9;
   --light-gray-70: #e3dac9b3;
   --bittersweet-shimmer: #b84c4c;
+  --bittersweet-shimmer-70: #b84c4cb3;
   --transparent: #ffffff00;
 
   /* CLIENT CUSTOM COLORS */
@@ -158,6 +156,8 @@
   --fs-6: 14px;
   --fs-7: 13px;
   --fs-8: 11px;
+  --fs-9: 10px;
+  --fs-10: 8px;
 
   /* FONT-WEIGHT */
   --fw-300: 300;
