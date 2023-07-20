@@ -65,6 +65,7 @@ fetch("../assets/data/projects.xlsx")
       image.setAttribute("data-project-series", project.series);
       image.setAttribute("data-project-on-sale", project.onSale);
       image.setAttribute("data-project-awarded", project.awarded);
+      image.setAttribute("crossorigin", "anonymous");
 
       if(project.onSale === "false") {
         const soldItem = document.createElement("div");
