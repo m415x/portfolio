@@ -21,12 +21,13 @@ fetch("../assets/data/projects.xlsx")
 
     // Generate the HTML elements for each project
     shuffledProjects.forEach(project => {
+
       const categories = project.category.split(", ");
 
       if(project.onSale === "true") {
         categories.push("en venta");
       }
-      if(project.awarded === "true") {
+      if(project.awarded !== "false") {
         categories.push("premiadas");
       }
 
@@ -38,10 +39,6 @@ fetch("../assets/data/projects.xlsx")
       listItem.setAttribute("data-category", categories.join(", "));
 
       const aItem = document.createElement("a");
-      const img = new Image();
-      img.src = `./media/${project.category}/${project.image}`;
-      const imgWidth = img.naturalWidth;
-      const imgHeight = img.naturalHeight;
       aItem.href = `./media/${project.category}/${project.image}`;
       aItem.setAttribute("data-project-title", project.title);
       aItem.setAttribute("data-project-date", project.date);
@@ -50,8 +47,8 @@ fetch("../assets/data/projects.xlsx")
       aItem.setAttribute("data-project-series", project.series);
       aItem.setAttribute("data-project-on-sale", project.onSale);
       aItem.setAttribute("data-project-awarded", project.awarded);
-      aItem.setAttribute("data-pswp-width", imgWidth);
-      aItem.setAttribute("data-pswp-height", imgHeight);
+      aItem.setAttribute("data-pswp-width", project.width);
+      aItem.setAttribute("data-pswp-height", project.height);
       aItem.setAttribute("target", "_blank");
 
       const image = document.createElement("img");
@@ -65,7 +62,7 @@ fetch("../assets/data/projects.xlsx")
       image.setAttribute("data-project-series", project.series);
       image.setAttribute("data-project-on-sale", project.onSale);
       image.setAttribute("data-project-awarded", project.awarded);
-      image.setAttribute("crossorigin", "anonymous");
+      // image.setAttribute("crossorigin", "anonymous");
 
       if(project.onSale === "false") {
         const soldItem = document.createElement("div");
@@ -90,6 +87,7 @@ fetch("../assets/data/projects.xlsx")
 
     // Convert uniqueCategories set to an array and sort alphabetically
     const sortedCategories = Array.from(uniqueCategories).sort();
+    console.log(sortedCategories)
 
     // Move the category "en venta" to position 0
     const indexEnVenta = sortedCategories.indexOf("en venta");
@@ -125,7 +123,7 @@ fetch("../assets/data/projects.xlsx")
     });
 
     // Call a function to apply lazy loading after the elements have been added to the DOM
-      // applyLazyLoading();
+      applyLazyLoading();
 
   })
   .catch(error => {
@@ -134,12 +132,12 @@ fetch("../assets/data/projects.xlsx")
 
 
 // Function to add loading lazy
-/*function applyLazyLoading() {
+function applyLazyLoading() {
   const images = document.querySelectorAll("[data-project-list] img");
   images.forEach(image => {
     image.setAttribute("loading", "lazy");
   });
-}*/
+}
 
 
 // Function to shuffle an array

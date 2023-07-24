@@ -184,9 +184,9 @@ window.onload = () => {
   }
 
   // Hide loader after 5 seconds
-  // const loader = document.querySelector("[data-loader]");
-  // setTimeout(() => {
-  //   loader.style.display = "none";
-  // }, 2000);
+  const loader = document.querySelector("[data-loader]");
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 2000);
   
 }

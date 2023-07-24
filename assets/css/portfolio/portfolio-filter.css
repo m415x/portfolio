@@ -21,6 +21,7 @@
     gap: 25px;
     padding-left: 5px;
     margin-bottom: 30px;
+    flex-wrap: nowrap;
   }
 
   .portfolio__filter-select {

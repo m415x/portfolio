@@ -20,7 +20,7 @@ function imageLoaded() {
       pswpModule: () => import('../../vendor/photoswipe/dist/photoswipe.esm.js'),
     
       // Modify this value to adjust the size of the image within the viewer
-      fitRatio: 0.95,
+      // fitRatio: 0.75,
     
       // Background backdrop opacity
       bgOpacity: 0.8,
@@ -31,11 +31,6 @@ function imageLoaded() {
       // Used for slide count indicator
       indexIndicatorSep: ' de ',
     
-      // Disable vertical drag on mobile devices
-      allowVerticalDrag: false,
-    
-      // Scales the image to fit completely within the PhotoSwipe viewer without distorting it
-      scaleMode: 'zoom'
     };
     
     const lightbox = new PhotoSwipeLightbox(options);
@@ -95,10 +90,10 @@ function imageLoaded() {
     lightbox.init();
 
     // Hide loader after 5 seconds
-    const loader = document.querySelector("[data-loader]");
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 2000);
+    // const loader = document.querySelector("[data-loader]");
+    // setTimeout(() => {
+      // loader.style.display = "none";
+    // }, 2000);
 
   }
   
