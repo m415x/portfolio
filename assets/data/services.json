@@ -1,12 +1,17 @@
 [
   {
     "icon": "./assets/images/services/palette.svg",
-    "title": "Pintora",
-    "description": "Descripción de pintora"
+    "title": "Dibujo",
+    "description": "Mi forma de trabajar es de constante búsqueda y experimentación, trabajo con materiales variados como lápices, tintas y acuarelas, lapice de colores y marcadores. Uso papeles de diferentes formatos y gramajes. Amo trabajar con figuras humanas y modelos vivos, dibujo todo el tiempo, dibujo historias de gente real y todo lo que va aconteciendo en mi contexto cotidiano. Se podría decir que mi trabajo y contenido es casi etnográfico. Retrato personas, animales y escenas de la vida, lo que está cerca y a veces esta invisibilizado. Hace un tiempo empecé a usar formatos muy grandes y la tela en bastidores como soportes alternativos. Las paletas son variadas aunque me gusta mucho usar la monocromía o el acromatismo. Depende de lo que esté representando."
   },
   {
     "icon": "./assets/images/services/brush.svg",
-    "title": "Dibujante",
-    "description": "Descripción de dibujante"
+    "title": "Ilustración",
+    "description": "Hace ya varios años trabajo haciendo Ilustraciones para escritores, ilustro poemas, cuentos, relatos, novelas, y hasta diseños para vestuarios, afiches y escenografías para obras de teatro. Este trabajo requiere de gran conexión de mi parte con la obra y sobre todo del dialogo directo y cercano con los escritores, es una tarea que realmente me fascina. Para todos mis trabajos de obras en ilustraciones y demás, entrego certificado de autenticidad. "
+  },
+  {
+    "icon": "./assets/images/services/palette.svg",
+    "title": "Pintura y Escultura",
+    "description": "En las pinturas las temáticas que uso suelen tener también como en los dibujos, un tinte social, de crítica social o de ficción. Trabajo con pequeños, medianos y grandes formatos, en papel o lienzo. Generalmente uso acrílicos, acuarelas o tintas. Eventualmente trabajo paisaje sanjuanino o estudio de objetos, y elementos de la naturaleza, flora y fauna sanjuanina. Las esculturas que realizo son de pequeño y mediano formato, y son generalmente retratos de personas, perros o cacharros. Uso arcillas de san Juan que personalmente recolecto del rio y la proceso. Uso para pintar engobes de colores y algunos esmaltes. "
   }
 ]
