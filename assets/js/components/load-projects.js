@@ -52,9 +52,21 @@ fetch("../assets/data/projects.xlsx")
       aItem.setAttribute("target", "_blank");
 
       const image = document.createElement("img");
-      image.src = `./media/${project.category}/${project.image}`;
-      image.alt = project.title;
-      image.classList.add("portfolio__project__item__img");
+      // image.src = "";
+      image.classList.add("portfolio__project__item__img", "lazyload");
+      image.alt = `${project.title}. ${project.technique}`;
+      image.setAttribute("data-lowsrc", `./media/${project.category}/${project.image}-low.jpg`);
+      image.setAttribute("data-sizes", "auto");
+      image.setAttribute("data-srcset", `
+        ./media/${project.category}/${project.image}-small.webp 420w,
+        ./media/${project.category}/${project.image}-medium.webp 1024w,
+        ./media/${project.category}/${project.image}.webp 1920w
+      `);
+      image.setAttribute("data-srcset", `
+        ./media/${project.category}/${project.image}-small.jpg 420w,
+        ./media/${project.category}/${project.image}-medium.jpg 1024w,
+        ./media/${project.category}/${project.image}.jpg 1920w
+      `);
       image.setAttribute("data-project-title", project.title);
       image.setAttribute("data-project-date", project.date);
       image.setAttribute("data-project-technique", project.technique);
@@ -62,7 +74,6 @@ fetch("../assets/data/projects.xlsx")
       image.setAttribute("data-project-series", project.series);
       image.setAttribute("data-project-on-sale", project.onSale);
       image.setAttribute("data-project-awarded", project.awarded);
-      // image.setAttribute("crossorigin", "anonymous");
 
       if(project.onSale === "false") {
         const soldItem = document.createElement("div");
@@ -123,7 +134,7 @@ fetch("../assets/data/projects.xlsx")
     });
 
     // Call a function to apply lazy loading after the elements have been added to the DOM
-      applyLazyLoading();
+      // applyLazyLoading();
 
   })
   .catch(error => {
@@ -132,12 +143,12 @@ fetch("../assets/data/projects.xlsx")
 
 
 // Function to add loading lazy
-function applyLazyLoading() {
-  const images = document.querySelectorAll("[data-project-list] img");
-  images.forEach(image => {
-    image.setAttribute("loading", "lazy");
-  });
-}
+// function applyLazyLoading() {
+//   const images = document.querySelectorAll("[data-project-list] img");
+//   images.forEach(image => {
+//     image.setAttribute("loading", "lazy");
+//   });
+// }
 
 
 // Function to shuffle an array
