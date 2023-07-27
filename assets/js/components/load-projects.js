@@ -39,7 +39,7 @@ fetch("../assets/data/projects.xlsx")
       listItem.setAttribute("data-category", categories.join(", "));
 
       const aItem = document.createElement("a");
-      aItem.href = `./media/${project.category}/${project.image}`;
+      aItem.href = `./media/full/${project.category}/${project.image}.jpg`;
       aItem.setAttribute("data-project-title", project.title);
       aItem.setAttribute("data-project-date", project.date);
       aItem.setAttribute("data-project-technique", project.technique);
@@ -55,17 +55,17 @@ fetch("../assets/data/projects.xlsx")
       // image.src = "";
       image.classList.add("portfolio__project__item__img", "lazyload");
       image.alt = `${project.title}. ${project.technique}`;
-      image.setAttribute("data-lowsrc", `./media/${project.category}/${project.image}-low.jpg`);
+      image.setAttribute("data-lowsrc", `./media/low/${project.category}/${project.image}-low.jpg`);
       image.setAttribute("data-sizes", "auto");
       image.setAttribute("data-srcset", `
-        ./media/${project.category}/${project.image}-small.webp 420w,
-        ./media/${project.category}/${project.image}-medium.webp 1024w,
-        ./media/${project.category}/${project.image}.webp 1920w
+        ./media/small/${project.category}/${project.image}-small.webp 420w,
+        ./media/medium/${project.category}/${project.image}-medium.webp 1024w,
+        ./media/full/${project.category}/${project.image}.webp 1920w
       `);
       image.setAttribute("data-srcset", `
-        ./media/${project.category}/${project.image}-small.jpg 420w,
-        ./media/${project.category}/${project.image}-medium.jpg 1024w,
-        ./media/${project.category}/${project.image}.jpg 1920w
+        ./media/small/${project.category}/${project.image}-small.jpg 420w,
+        ./media/medium/${project.category}/${project.image}-medium.jpg 1024w,
+        ./media/full/${project.category}/${project.image}.jpg 1920w
       `);
       image.setAttribute("data-project-title", project.title);
       image.setAttribute("data-project-date", project.date);
@@ -164,6 +164,5 @@ function shuffle(array) {
     array[currentIndex] = array[randomIndex];
     array[randomIndex] = temporaryValue;
   }
-
   return array;
 }
