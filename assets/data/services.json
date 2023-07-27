@@ -11,7 +11,12 @@
   },
   {
     "icon": "./assets/images/services/palette.svg",
-    "title": "Pintura y Escultura",
-    "description": "En las pinturas las temáticas que uso suelen tener también como en los dibujos, un tinte social, de crítica social o de ficción. Trabajo con pequeños, medianos y grandes formatos, en papel o lienzo. Generalmente uso acrílicos, acuarelas o tintas. Eventualmente trabajo paisaje sanjuanino o estudio de objetos, y elementos de la naturaleza, flora y fauna sanjuanina. Las esculturas que realizo son de pequeño y mediano formato, y son generalmente retratos de personas, perros o cacharros. Uso arcillas de san Juan que personalmente recolecto del rio y la proceso. Uso para pintar engobes de colores y algunos esmaltes. "
+    "title": "Pintura",
+    "description": "En las pinturas las temáticas que uso suelen tener también como en los dibujos, un tinte social, de crítica social o de ficción. Trabajo con pequeños, medianos y grandes formatos, en papel o lienzo. Generalmente uso acrílicos, acuarelas o tintas. Eventualmente trabajo paisaje sanjuanino o estudio de objetos, y elementos de la naturaleza, flora y fauna sanjuanina."
+  },
+  {
+    "icon": "./assets/images/services/palette.svg",
+    "title": "Escultura",
+    "description": "Las esculturas que realizo son de pequeño y mediano formato, y son generalmente retratos de personas, perros o cacharros. Uso arcillas de san Juan que personalmente recolecto del rio y la proceso. Uso para pintar engobes de colores y algunos esmaltes. "
   }
 ]
