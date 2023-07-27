@@ -52,10 +52,10 @@ fetch("../assets/data/projects.xlsx")
       aItem.setAttribute("target", "_blank");
 
       const image = document.createElement("img");
-      // image.src = "";
       image.classList.add("portfolio__project__item__img", "lazyload");
       image.alt = `${project.title}. ${project.technique}`;
-      image.setAttribute("data-lowsrc", `./media/low/${project.category}/${project.image}-low.jpg`);
+      image.src = `./media/low/${project.category}/${project.image}-low.jpg`;
+      // image.setAttribute("data-src", `./media/low/${project.category}/${project.image}-low.jpg`);
       image.setAttribute("data-sizes", "auto");
       image.setAttribute("data-srcset", `
         ./media/small/${project.category}/${project.image}-small.webp 420w,
@@ -98,7 +98,6 @@ fetch("../assets/data/projects.xlsx")
 
     // Convert uniqueCategories set to an array and sort alphabetically
     const sortedCategories = Array.from(uniqueCategories).sort();
-    console.log(sortedCategories)
 
     // Move the category "en venta" to position 0
     const indexEnVenta = sortedCategories.indexOf("en venta");

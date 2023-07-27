@@ -42,7 +42,7 @@ window.onload = () => {
   // modal variable
   const modalImg = document.querySelector("[data-modal-img]");
   const modalTitle = document.querySelector("[data-modal-title]");
-  // const modalDate = document.querySelector("[data-modal-date]");
+  const modalDate = document.querySelector("[data-modal-date]");
   const modalProfession = document.querySelector("[data-modal-profession]");
   const modalText = document.querySelector("[data-modal-text]");
 
@@ -62,7 +62,7 @@ window.onload = () => {
       modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
       modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
       modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-      // modalDate.innerHTML = this.querySelector("[data-testimonials-date]").innerHTML;
+      modalDate.innerHTML = this.querySelector("[data-testimonials-date]").innerHTML;
       modalProfession.innerHTML = this.querySelector("[data-testimonials-profession]").innerHTML;
       modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 

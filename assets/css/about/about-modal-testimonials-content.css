@@ -6,12 +6,12 @@
   margin-bottom: 4px;
 }
 
-/* .about__modal__testimonials__content time {
+.about__modal__testimonials__content time {
   font-size: var(--fs-6);
   color: var(--light-gray-70);
   font-weight: var(--fw-300);
   margin-bottom: 10px;
-} */
+}
 
 .about__modal__testimonials__content h6 {
   font-size: var(--fs-6);

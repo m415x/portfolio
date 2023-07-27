@@ -28,11 +28,11 @@ fetch("../assets/data/testimonials.json")
       h4.setAttribute("data-testimonials-title", "");
       h4.textContent = testimonial.name;
 
-      // const time = document.createElement("time");
-      // time.setAttribute("datetime", testimonial.date);
-      // time.style.display = "none";
-      // time.setAttribute("data-testimonials-date", "");
-      // time.textContent = testimonial.date;
+      const time = document.createElement("time");
+      time.setAttribute("datetime", testimonial.date);
+      time.style.display = "none";
+      time.setAttribute("data-testimonials-date", "");
+      time.textContent = testimonial.date;
 
       const profession = document.createElement("h6");
       profession.style.display = "none";
@@ -52,7 +52,7 @@ fetch("../assets/data/testimonials.json")
 
       div.appendChild(figure);
       div.appendChild(h4);
-      // div.appendChild(time);
+      div.appendChild(time);
       div.appendChild(profession);
       div.appendChild(divText);
 

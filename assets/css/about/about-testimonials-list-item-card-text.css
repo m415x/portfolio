@@ -18,8 +18,8 @@
 @media screen and (min-width: 580px) {
 
   .about__testimonials__list__item__card__text {
-    line-clamp: 2;
-    -webkit-line-clamp: 2;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
   }
 
 }

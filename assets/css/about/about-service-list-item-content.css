@@ -11,6 +11,11 @@
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 
