@@ -25,8 +25,12 @@ fetch("../assets/data/services.json")
       titleH4.textContent = activity.title;
       const descriptionP = document.createElement("p");
       descriptionP.textContent = activity.description;
+      const readMoreBtn = document.createElement("button");
+      readMoreBtn.textContent = "leer más";
+      
       contentDiv.appendChild(titleH4);
       contentDiv.appendChild(descriptionP);
+      contentDiv.appendChild(readMoreBtn);
 
       li.appendChild(iconDiv);
       li.appendChild(contentDiv);
