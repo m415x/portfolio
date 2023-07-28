@@ -1,7 +1,7 @@
 'use strict';
 
-
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
+// window.onload = () => {
 
   // element toggle function
   const elementToggleFunc = (elem) => {
@@ -204,10 +204,12 @@ window.onload = () => {
 
   }
 
+
   // Hide loader after 5 seconds
-  // const loader = document.querySelector("[data-loader]");
-  // setTimeout(() => {
-  //   loader.style.display = "none";
-  // }, 2000);
+  const loader = document.querySelector("[data-loader]");
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 2000);
   
-}
+// }
+})

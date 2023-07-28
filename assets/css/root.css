@@ -105,6 +105,11 @@
     #ffda6b40 0%, 
     #ffbb5c00 59.86%
   ), #202022;
+  --bg-gradient-yellow-70: linear-gradient(
+    to bottom right, 
+    #ffda6bb3 0%, 
+    #ffc061b3 50%
+  );
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
     #404040 0%, 

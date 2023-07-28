@@ -55,7 +55,6 @@ fetch("../assets/data/projects.xlsx")
       image.classList.add("portfolio__project__item__img", "lazyload");
       image.alt = `${project.title}. ${project.technique}`;
       image.src = `./media/low/${project.category}/${project.image}-low.jpg`;
-      // image.setAttribute("data-src", `./media/low/${project.category}/${project.image}-low.jpg`);
       image.setAttribute("data-sizes", "auto");
       image.setAttribute("data-srcset", `
         ./media/small/${project.category}/${project.image}-small.webp 420w,
@@ -86,8 +85,10 @@ fetch("../assets/data/projects.xlsx")
 
       if(project.awarded !== "false") {
         const awardedItem = document.createElement("div");
-        awardedItem.classList.add("portfolio__project__item--awarded");
-        awardedItem.textContent = "Premiada";
+        awardedItem.classList.add("portfolio__project__item--awarded", "down");
+        const pItem = document.createElement("p");
+        pItem.textContent = project.awarded.replace(/ /g, '\n');
+        awardedItem.appendChild(pItem);
         listItem.appendChild(awardedItem);
       }
 
@@ -132,22 +133,10 @@ fetch("../assets/data/projects.xlsx")
       filterSelect.appendChild(categoryItemSelect);
     });
 
-    // Call a function to apply lazy loading after the elements have been added to the DOM
-      // applyLazyLoading();
-
   })
   .catch(error => {
     console.log("Error al cargar los proyectos:", error);
 });
-
-
-// Function to add loading lazy
-// function applyLazyLoading() {
-//   const images = document.querySelectorAll("[data-project-list] img");
-//   images.forEach(image => {
-//     image.setAttribute("loading", "lazy");
-//   });
-// }
 
 
 // Function to shuffle an array
