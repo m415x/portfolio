@@ -37,18 +37,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const servicesParagraphs = document.querySelectorAll("[data-service-list] p");
   const readMoreLessBtns = document.querySelectorAll("[data-service-list] button");
 
-  // Agregar un evento click a cada botón "Leer más"
   readMoreLessBtns.forEach((btn, index) => {
     btn.addEventListener('click', () => {
-      // Alternar la clase "expanded" solo en el párrafo correspondiente
       servicesParagraphs[index].classList.toggle('active');
 
-      // Cambiar el texto del botón según el estado del párrafo
       if (servicesParagraphs[index].classList.contains('active')) {
         btn.textContent = 'contraer';
       } else {
         btn.textContent = 'leer más';
       }
+
     });
   });
 

@@ -87,7 +87,7 @@ fetch("../assets/data/projects.xlsx")
         const awardedItem = document.createElement("div");
         awardedItem.classList.add("portfolio__project__item--awarded", "down");
         const pItem = document.createElement("p");
-        pItem.textContent = project.awarded.replace(/ /g, '\n');
+        pItem.innerHTML = project.awarded.split(". ")[0].toUpperCase().replace(" ", "<br>");
         awardedItem.appendChild(pItem);
         listItem.appendChild(awardedItem);
       }
@@ -104,14 +104,14 @@ fetch("../assets/data/projects.xlsx")
     const indexEnVenta = sortedCategories.indexOf("en venta");
     if (indexEnVenta > -1) {
       sortedCategories.splice(indexEnVenta, 1);
-      sortedCategories.unshift("en venta");
+      sortedCategories.push("en venta");
     }
 
     // Move the category "premiadas" to position 1
     const indexPremiadas = sortedCategories.indexOf("premiadas");
     if (indexPremiadas > -1) {
       sortedCategories.splice(indexPremiadas, 1);
-      sortedCategories.splice(1, 0, "premiadas");
+      sortedCategories.unshift("premiadas");
     }
 
     // Generate the HTML elements for category buttons

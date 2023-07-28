@@ -52,11 +52,13 @@ function imageLoaded() {
               const title = currSlideElement.dataset.projectTitle || '';
               const date = currSlideElement.dataset.projectDate || '';
               const technique = currSlideElement.dataset.projectTechnique || '';
+              const onSale = currSlideElement.dataset.projectOnSale || '';
+              const awarded = currSlideElement.dataset.projectAwarded || '';
               let dimensions = currSlideElement.dataset.projectDimensions || '';
               if(dimensions == "pequeño formato") {
-                dimensions = "Pequeño formato";
+                dimensions = `Pequeño formato`;
               } else if (dimensions == "gran formato") {
-                dimensions = "Gran formato";
+                dimensions = `Gran formato`;
               } else if (dimensions == "undefined") {
                 dimensions = "undefined";
               } else {
@@ -64,21 +66,14 @@ function imageLoaded() {
               }
     
               // Create the custom caption HTML
-              if(dimensions != "undefined") {
-                captionHTML = `
-                  <div class="custom-caption">
-                    <p>« ${title} » · ${date}</p>
-                    <p>${technique} · ${dimensions}</p>
-                  </div>
-                `;
-              } else {
-                captionHTML = `
-                  <div class="custom-caption">
-                    <p>« ${title} » · ${date}</p>
-                    <p>${technique}</p>
-                  </div>
-                `;
-              }
+              captionHTML = `
+                <div class="custom-caption">
+                  <p>« ${title} » ${title != "undefined" && date != "undefined" ? " · " : ""} ${date != "undefined" ? date : ""}</p>
+                  <p>${technique != "undefined" ? technique : ""} ${technique != "undefined" && dimensions != "undefined" ? " · " : ""} ${dimensions != "undefined" ? dimensions : ""}</p>
+                  <p>${awarded != "false" ? awarded.replace(".", " -") : ""} ${awarded != "false" && onSale == "false" ? " · " : ""} ${onSale != "true" ? "VENDIDA" : ""}</p>
+                </div>
+              `;
+
             }
             el.innerHTML = captionHTML || '';
           });
