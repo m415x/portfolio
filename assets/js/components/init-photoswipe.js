@@ -10,6 +10,7 @@ function imageLoaded() {
   if (loadedCount === images.length) {
     // Todas las imágenes han sido cargadas, inicializar PhotoSwipe
     const options = {
+
       // may select multiple "galleries"
       gallery: '#gallery',
     
@@ -19,9 +20,17 @@ function imageLoaded() {
       // setup PhotoSwipe Core dynamic import
       pswpModule: () => import('../../vendor/photoswipe/dist/photoswipe.esm.js'),
     
-      // Modify this value to adjust the size of the image within the viewer
-      // fitRatio: 0.75,
-    
+    // Show the load indicator while images are loading
+    preloaderEl: true,
+
+    // Disable user interaction in the gallery while images are loading
+    getThumbBoundsFn: false,
+
+    isClickableElement: function (el) {
+      // Returns false to disable interaction with images while loading
+      return false;
+    },
+
       // Background backdrop opacity
       bgOpacity: 0.8,
     
