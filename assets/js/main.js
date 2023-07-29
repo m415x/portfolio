@@ -13,20 +13,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // sidebar variables
   const sidebar = document.querySelector("[data-sidebar]");
   const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-  const sidebarSpan = document.querySelector("[data-sidebar-span]");
-  const sidebarIcon = document.querySelector("[data-sidebar-icon]");
+  const sidebarSpanFirst = document.querySelector("[data-sidebar-span-first]");
+  const sidebarSpanLast = document.querySelector("[data-sidebar-span-last]");
 
   // sidebar toggle functionality for mobile
   sidebarBtn.addEventListener("click", () => {
 
     elementToggleFunc(sidebar);
 
-    if (sidebarSpan.textContent === "Mostrar contactos") {
-      sidebarSpan.textContent = "Ocultar contactos";
-      sidebarIcon.style.transform = "rotate(180deg)";
+    if (sidebarSpanFirst.textContent === "Mostrar contactos") {
+      sidebarSpanFirst.textContent = "Ocultar contactos";
+      sidebarSpanLast.textContent = "Ocultar";
     } else {
-      sidebarSpan.textContent = "Mostrar contactos";
-      sidebarIcon.style.transform = "rotate(0)";
+      sidebarSpanFirst.textContent = "Mostrar contactos";
+      sidebarSpanLast.textContent = "Mostrar";
     }
 
   });

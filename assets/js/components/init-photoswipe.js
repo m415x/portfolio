@@ -26,7 +26,7 @@ function imageLoaded() {
       bgOpacity: 0.8,
     
       // Slide area padding
-      padding: { top: 20, bottom: 70, left: 20, right: 20 },
+      padding: { top: 20, bottom: 90, left: 20, right: 20 },
     
       // Used for slide count indicator
       indexIndicatorSep: ' de ',
@@ -55,16 +55,15 @@ function imageLoaded() {
               const onSale = currSlideElement.dataset.projectOnSale || '';
               const awarded = currSlideElement.dataset.projectAwarded || '';
               let dimensions = currSlideElement.dataset.projectDimensions || '';
+
               if(dimensions == "pequeño formato") {
-                dimensions = `Pequeño formato`;
+                dimensions = "Pequeño formato";
               } else if (dimensions == "gran formato") {
-                dimensions = `Gran formato`;
-              } else if (dimensions == "undefined") {
-                dimensions = "undefined";
-              } else {
+                dimensions = "Gran formato";
+              } else if (dimensions.includes(",")) {
                 dimensions = `${dimensions.split(", ")[0]}x${dimensions.split(", ")[1]}cm`;
               }
-    
+
               // Create the custom caption HTML
               captionHTML = `
                 <div class="custom-caption">

@@ -28,7 +28,8 @@
 .about__service__list__item__content p.active {
   line-clamp: initial;
   -webkit-line-clamp: initial;
-
+  overflow: visible;
+	transition: var(--transition-2);
 }
 
 
