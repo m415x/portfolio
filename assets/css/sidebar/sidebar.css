@@ -81,4 +81,8 @@
     z-index: 1;
 	}
 
+  .sidebar.active {
+		max-height: max-content;
+	}
+
 }

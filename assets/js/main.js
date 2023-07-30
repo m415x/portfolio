@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const loader = document.querySelector("[data-loader]");
   setTimeout(() => {
     loader.style.display = "none";
-  }, 2000);
+  }, 3000);
   
 // }
 })

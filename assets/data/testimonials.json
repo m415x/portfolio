@@ -17,15 +17,6 @@
     ]
   },
   {
-    "avatar": "assets/images/testimonials/antonio_guzzo.jpg",
-    "name": "Antonio Guzzo - Argentino",
-    "date": "Junio 2021",
-    "profession": "Blogger",
-    "text": [
-      "Algo"
-    ]
-  },
-  {
     "avatar": "assets/images/testimonials/silvina_martinez.jpg",
     "name": "Silvina Martínez - Argentina",
     "date": "2016",
@@ -37,6 +28,18 @@
       "Sus narraciones visuales no se ajustan a un tiempo o un lugar determinados, son atemporales. Un tipo de representaciones cercanas a la caricatura o al mundo de la historieta y el comic, que hacen recordar a las imágenes de la grabadora Aida Carballo y a ciertos dibujos de Luis Suárez Jofré. Abunda el humor, la ironía y el sarcasmo, y una mezcla inquietante entre lo real, lo imaginario y lo fantástico.",
       "Con una carga lúdica y una frescura que no tienen nada de superficial, ya que incitan a reflexionar y deambular de lo cómico y alegre a lo grotesco y a lo dramático.",
       "Excelente dibujo y buen manejo compositivo, interesante contrapunto entre zonas oscuras y claras, entre líneas y planos que le dan musicalidad al conjunto."
+    ]
+  },
+  {
+    "avatar": "assets/images/testimonials/antonio_guzzo.jpg",
+    "name": "Antonio Guzzo - Argentino",
+    "date": "Abril 2021",
+    "profession": "Comentarista de arte",
+    "text": [
+      "« Siempre hay un cielo al que podemos mirar esperanzados »",
+      "El dibujo, el que fluye sin descanso y muestra seres vivos, personajes del aquí y ahora o desde un pasado de tradiciones y costumbres arraigadas que aún permanecen. Todo ese universo que llena el espíritu de Alejandra Carabante, como algo natural, adquiere la tridimensión, El volumen que necesitaban sus personajes para que sean palpables, inspiradores de las emociones que encierran. La arcilla y el agua le dan a Alejandra esa potestad creadora y eso se puede hacer cuando hay una riqueza de valores vivenciales, sensaciones elevadas capaces de superar obstáculos y absorber enseñanzas de cada paso dado.",
+      "Podemos decir de sus obras, nos invita a recorrerlas desde distintas visuales y extraer todo cuanto las mismas nos ceden y seamos nosotros quienes exaltemos sus propios valores.",
+      "Alejandra Carabante eres tu propia alumna, eres incansable creadora en dos y tres dimensiones. Papel y arcilla son tus elementos, de herramientas múltiples, pero todo sale de tu mente y tus manos."
     ]
   }
 ]

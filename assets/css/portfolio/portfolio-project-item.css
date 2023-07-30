@@ -98,4 +98,10 @@
     top: 20px;
   }
 
+  .portfolio__project__item--awarded > p {
+    font-size: var(--fs-7);
+    max-width: 80px;
+    min-height: 90px;
+  }
+
 }
